@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+A place for me to document what I've learned about machine learning + create materials for others to learn too.
+
+Similar but more general to other sites I've created:
+
+* [learnpytorch.io](https://learnpytorch.io) - Specific for learning PyTorch.
+* [learntensorflow.io](https://learntensorflow.io) - Specific for learning TensorFlow.
+* [learnhuggingface.com](https://learnhuggingface.com) - Specific for learning Hugging Face.
+
+[Daniel Bourke](https://www.mrdbourke.com) makes this.

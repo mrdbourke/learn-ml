@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "A place for me to document what I’ve learned about machine learning + create materials for others to learn too.\nSimilar but more general to other sites I’ve created:\n\nlearnpytorch.io - Specific for learning PyTorch.\nlearntensorflow.io - Specific for learning TensorFlow.\nlearnhuggingface.com - Specific for learning Hugging Face.\n\nDaniel Bourke makes this."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learn ML",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Start of learnml.io\n\n\n\n\n\n\nml\n\n\ngetting started\n\n\n\n\n\n\n\n\n\nAug 10, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2024-08-10-start-ml-blog/index.html",
+    "href": "posts/2024-08-10-start-ml-blog/index.html",
+    "title": "Start of learnml.io",
+    "section": "",
+    "text": "Yo!\nI’d like to start a machine learning blog.\nA website too.\nWith ML concepts + code, interesting learns, tutorials and more.\nI’ve got my other blog too which is excellent for less-tech orientated things (but also some tech things).\nAnyway, this website will be more focused on the pure ML side of things.\nFor now, there’s not much.\nBut I’ll slowly build it up over time.\nBest not to overthink these things.\nThat’s the big killer.\nJust create what your heart sings to create.\nIt’s the best long-term strategy.\nNow, first thing is first, get the domain (learnml.io) and get the website live.\nThat’s some motivation to keep going!\nPublish, publish, publish!"
+  }
+]

@@ -1,0 +1,36 @@
+---
+title: "Start of learnml.io"
+author: "Daniel Bourke"
+date: "2024-08-10"
+categories: [ml, getting started]
+---
+
+Yo!
+
+I'd like to start a machine learning blog.
+
+A website too.
+
+With ML concepts + code, interesting learns, tutorials and more.
+
+I've got [my other blog too](https://www.mrdbourke.com) which is excellent for less-tech orientated things (but also some tech things).
+
+Anyway, this website will be more focused on the pure ML side of things.
+
+For now, there's not much.
+
+But I'll slowly build it up over time.
+
+Best not to overthink these things.
+
+That's the big killer.
+
+Just create what your heart sings to create.
+
+It's the best long-term strategy.
+
+Now, first thing is first, get the domain (learnml.io) and get the website live.
+
+That's some motivation to keep going!
+
+Publish, publish, publish!

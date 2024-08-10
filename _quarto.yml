@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "learn ml"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - blog.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

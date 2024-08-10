@@ -1,0 +1,13 @@
+# Folders
+/.quarto/
+
+# Models
+*models*
+*.pt*
+
+# Tracking
+*/wandb/* 
+
+# Misc
+*.DS_Store
+*.ipynb_checkpoints
