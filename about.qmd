@@ -11,3 +11,9 @@ Similar but more general to other sites I've created:
 * [learnhuggingface.com](https://learnhuggingface.com) - Specific for learning Hugging Face.
 
 [Daniel Bourke](https://www.mrdbourke.com) makes this.
+
+## How is this website made?
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
