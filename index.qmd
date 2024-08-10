@@ -8,4 +8,4 @@ More coming soon.
 
 Just getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.
 
-
+See the [start blog post](https://www.learnml.io/posts/2024-08-10-start-ml-blog/) for more.
