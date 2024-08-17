@@ -4,7 +4,8 @@ project:
 website:
   title: "learn ml"
   site-url: "https://www.learnml.io"
-  twitter-card: true
+  description: a blog about learning machine learning
+  twitter-card: true 
   open-graph: true
   navbar:
     left:
