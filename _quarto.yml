@@ -4,6 +4,8 @@ project:
 website:
   title: "learn ml"
   site-url: "https://www.learnml.io"
+  twitter-card: true
+  open-graph: true
   navbar:
     left:
       - href: index.qmd
