@@ -3,7 +3,7 @@ project:
 
 website:
   title: "learn ml"
-  site-url: "https://www.learnml.io"
+  site-url: https://www.learnml.io
   description: a blog about learning machine learning
   twitter-card: true 
   open-graph: true
