@@ -250,6 +250,7 @@ Three datasets refresher
 <li><strong>Have everyone on the team interact/visualize at least 100 random pieces of <em>real</em> data.</strong> Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.</li>
 <li><strong>Spend time crafting a high quality test set with data samples from your actual use case.</strong> This test set may turn out to be the most valuable piece of your project.</li>
 <li><strong>Continually review the test set overtime to make sure it matches your production use case.</strong> As your product changes over time, so should the data you’re testing your models on.</li>
+<li><strong>Evaluating a model is just as important, if not more important than training a model.</strong> If you train a model but it performs poorly on the test set, is it really a useable model?</li>
 <li><strong>Traditional software has tests and so should machine learning-powered software.</strong> Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data <em>as</em> code, and so, if in software development you test your code, in ML, you should test your models/data.
 <ul>
 <li><strong>Note:</strong> Test cases in ML are also often referred to as “evals” or “evaluations”.</li>
@@ -369,7 +370,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/www\.learnml\.io");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -698,7 +699,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
