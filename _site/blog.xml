@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>learn ml</title>
+<link>https://www.learnml.io/blog.html</link>
+<atom:link href="https://www.learnml.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description>a blog about learning machine learning</description>
+<generator>quarto-1.5.56</generator>
+<lastBuildDate>Sat, 17 Aug 2024 14:00:00 GMT</lastBuildDate>
+<item>
+  <title>The importance of a test set</title>
+  <dc:creator>Daniel Bourke</dc:creator>
+  <link>https://www.learnml.io/posts/the-importance-of-a-test-set/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Had a phone call the other day with someone who wanted advice for their machine learning project.</p>
+<p>Their problem was a sound classification problem for 800 unique classes.</p>
+<p>Of course, the trend in the past may be to focus on which model to use.</p>
+<p>However, with modern deep learning models (e.g.&nbsp;2020 onwards), it’s likely a large enough transformer or convolutional neural network (CNN) model would be able to distinguish the 800 unique classes given enough data.</p>
+<p>With that being said, how could you test this?</p>
+<p>The classes they wanted to identify were specific to the product they offer.</p>
+<p>In this case, animal sound identification.</p>
+<p>They told me an existing dataset for their problem did exist online, however, the available dataset didn’t exactly offer the scenario they wanted to use the model in.</p>
+<p>And so my main piece of advice for starting the project (or any custom machine learning project) was for them to <strong>spend time crafting a test set well aligned with their exact use case</strong>.</p>
+<p>As in, if you expect your model is going to used in scenario X, collect data samples for scenario X and put them in your testing set.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Three datasets refresher
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As a reminder, in a machine learning project one of the first things that often happens is a dataset gets split into three sets:</p>
+<ol type="1">
+<li><strong>Training set</strong> - This is where a target model will try to learn the relationship between inputs and outputs. For example, does the input text “C0ngratl4tions!!1 You’ve won $23243248 d0llar9!!!” belong to the output label <code>spam</code> or <code>not_spam</code>?</li>
+<li><strong>Validation set</strong> - This where you can try to tweak the hyperparameters (settings) of your model to try and improve its results on the training set.</li>
+<li><strong>Test set</strong> - The model never sees these samples during training. You evaluate the model on this split to see how well the patterns learned on the training set generalise to unseen problems.</li>
+</ol>
+<p>An analogy would be that if a model is akin to a university student, the training set is the course materials, the validation set is the practice exam and the test set is the final exam.</p>
+<p>All three sets are exclusive of each other.</p>
+<p>For example, no samples which are in the training set should be in either of the other sets and vice versa.</p>
+</div>
+</div>
+</div>
+<p>Yes, crafting a high-quality test set can be time consuming.</p>
+<p>But it’s one of the most valuable things you can do in any machine learning project.</p>
+<p>Having a high quality test means you can experiment with different models, training setups and training data inputs (real and synthetic) and still be confident that if your model does well on your test set, these results will closely transfer to real-world use cases.</p>
+<p>For example, my brother and I work on a food education app called <a href="https://nutrify.app">Nutrify</a>.</p>
+<p>The premise of Nutrify is simple, take a photo of food with your smartphone, the food gets identified by computer vision and information about the food is displayed.</p>
+<p>For the computer vision models, we use a Vision Transformer (ViT) architecture, pretrained on ImageNet and then fine-tuned on our own custom dataset of food images and deployed to run on device (CoreML models running on iPhones, these models work offline with no internet connection).</p>
+<p>Our custom dataset contains a mixture of open-source internet images and real-life images (e.g.&nbsp;photos we’ve manually taken ourselves).</p>
+<p>The real-life images are crucial for our use case.</p>
+<p>Since when you find images of food on the internet, they are often not the same kind of images you might take when you’re quickly taking a photo of your meal or at supermarket when using Nutrify.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="When building a task-specific machine learning product, you can often get pretty good results with publically available data (e.g.&nbsp;images/text from the internet). However, if your task deviates from or doesn’t involve data readily available on the internet, you will often get to a point where you have to start collecting your own data sources for both training and testing. Source of image is a slide form a talk I gave on MLops lessons learned building Nutrify."><img src="https://www.learnml.io/posts/the-importance-of-a-test-set/images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The image contrasts 'Internet data' with 'Real life data.' On the left side, a Google search for 'red apple' shows various digital images and icons of apples, labeled as 'Internet data (Ok to get started).' On the right side, there are four photos of real apples in different contexts, labeled as 'Real life data (Required for reliability).' The message emphasizes that while internet data can be useful initially, real-life data is essential for accuracy and reliability."></a></p>
+</figure>
+</div>
+<figcaption>When building a task-specific machine learning product, you can often get pretty good results with publically available data (e.g.&nbsp;images/text from the internet). However, if your task deviates from or doesn’t involve data readily available on the internet, you will often get to a point where you have to start collecting your own data sources for both training and testing. Source of image is a slide form a <a href="https://youtu.be/pZXt-flSAZo?si=SKvS66OyGc7UIKIh">talk I gave on MLops lessons learned building Nutrify</a>.</figcaption>
+</figure>
+</div>
+<p>Food images on the internet are often high-quality shot with a digital camera from specific angles with good lighting or drawing-style images.</p>
+<p>Whereas food images taken on a smartphone are often less high-quality from almost any angle with multiple lighting conditions.</p>
+<p>And so, to make sure that our model doesn’t perform poorly when we deploy it to the Nutrify app, our test dataset is constructed with many real-life images that we’ve taken of food with the iPhone camera.</p>
+<p>So we know that if our model performs well on our test set, this performance <em>should</em> (note: should italicised because at the end of the day machine learning is still probabilistic and there are no guarantees) be mirrored in the real-world.</p>
+<p>We also test it ourselves many times in real-world situations before pushing the update live.</p>
+<p>However, once you get to a certain scale, testing every real-world situation can be hard/impossible to do yourself.</p>
+<p>This is where you’ll have to rely on your test set being well aligned with your actual problem.</p>
+<p>There’s a wonderful Japanese principle which captures this idea called <a href="https://en.wikipedia.org/wiki/Genchi_Genbutsu"><em>Genchi Genbustu</em></a> or “real things, real places” or “go an see for yourself”.</p>
+<p>In essence, make sure your test set comprises of samples containing “real things in real places”.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Having a good test set relates to almost any machine learning workflow.</p>
+<p>Whether you’re building a small application to identify foods with computer vision.</p>
+<p>Or whether you’re building a large language model (LLM) or self-driving car system to serve millions of customers.</p>
+<p>So a list of general recommendations for anyone working on a custom machine learning project:</p>
+<ul>
+<li><strong>Have everyone on the team interact/visualize at least 100 random pieces of <em>real</em> data.</strong> Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.</li>
+<li><strong>Spend time crafting a high quality test set with data samples from your actual use case.</strong> This test set may turn out to be the most valuable piece of your project.</li>
+<li><strong>Continually review the test set overtime to make sure it matches your production use case.</strong> As your product changes over time, so should the data you’re testing your models on.</li>
+<li><strong>Evaluating a model is just as important, if not more important than training a model.</strong> If you train a model but it performs poorly on the test set, is it really a useable model?</li>
+<li><strong>Traditional software has tests and so should machine learning-powered software.</strong> Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data <em>as</em> code, and so, if in software development you test your code, in ML, you should test your models/data.
+<ul>
+<li><strong>Note:</strong> Test cases in ML are also often referred to as “evals” or “evaluations”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="faq" class="level2">
+<h2 class="anchored" data-anchor-id="faq">FAQ</h2>
+<section id="what-about-the-training-set" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-the-training-set">What about the training set?</h3>
+<p>Ho ho! You are so right. Everything said for the test set can also be said for the training set.</p>
+<p>Especially “real things, real places”.</p>
+<p>This article focuses mainly on the test set as an example because of the availability of large pretrained foundation models.</p>
+<p>These models often perform very well in their given domain, however, can sometimes fail on very specific non-internet data (e.g.&nbsp;your custom dataset).</p>
+<p>So if you’re finding that your models are performing poorly on your task-specific test set, it may be time to collect more task-specific training samples and fine-tune your model on those.</p>
+</section>
+</section>
+<section id="extra-reading" class="level2">
+<h2 class="anchored" data-anchor-id="extra-reading">Extra reading</h2>
+<ul>
+<li>Hamel Husain’s blog post <a href="https://hamel.dev/blog/posts/evals/"><em>Your AI project needs evals</em></a> is an excellent read with a very a similar theme to this one and specific example use cases in the world of LLMs.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>custom datasets</category>
+  <category>data</category>
+  <category>getting started</category>
+  <category>ml</category>
+  <category>ml projects</category>
+  <guid>https://www.learnml.io/posts/the-importance-of-a-test-set/</guid>
+  <pubDate>Sat, 17 Aug 2024 14:00:00 GMT</pubDate>
+  <media:content url="https://www.learnml.io/posts/the-importance-of-a-test-set/images/ml-lesson-learned-internet-data-vs-real-life-data.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Start of learnml.io</title>
+  <dc:creator>Daniel Bourke</dc:creator>
+  <link>https://www.learnml.io/posts/2024-08-10-start-ml-blog/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Yo!</p>
+<p>I’d like to start a machine learning blog.</p>
+<p>A website too.</p>
+<p>With ML concepts + code, interesting learns, tutorials and more.</p>
+<p>I’ve got <a href="https://www.mrdbourke.com">my other blog too</a> which is excellent for less-tech orientated things (but also some tech things).</p>
+<p>Anyway, this website will be more focused on the pure ML side of things.</p>
+<p>For now, there’s not much.</p>
+<p>But I’ll slowly build it up over time.</p>
+<p>Best not to overthink these things.</p>
+<p>That’s the big killer.</p>
+<p>Just create what your heart sings to create.</p>
+<p>It’s the best long-term strategy.</p>
+<p>Now, first thing is first, get the domain (learnml.io) and get the website live.</p>
+<p>That’s some motivation to keep going!</p>
+<p>Publish, publish, publish!</p>
+
+
+
+ ]]></description>
+  <category>ml</category>
+  <category>getting started</category>
+  <guid>https://www.learnml.io/posts/2024-08-10-start-ml-blog/</guid>
+  <pubDate>Fri, 09 Aug 2024 14:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

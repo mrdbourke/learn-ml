@@ -15,7 +15,7 @@ website:
       - blog.qmd
     right:
       - icon: rss
-        href: index.xml
+        href: blog.xml
 
 format:
   html:
