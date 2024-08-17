@@ -4,7 +4,7 @@ description: "Real samples. Real places."
 author: "Daniel Bourke"
 date: "2024-08-18"
 categories: [custom datasets, data, getting started, ml, ml projects]
-image: "./images/ml-lesson-learned-internet-data-vs-real-life-data.png"
+image: "posts/the-importance-of-test-set-/images/ml-lesson-learned-internet-data-vs-real-life-data.png"
 ---
 
 Had a phone call the other day with someone who wanted advice for their machine learning project.
