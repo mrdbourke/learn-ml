@@ -3,12 +3,16 @@ project:
 
 website:
   title: "learn ml"
+  site-url: "https://www.learnml.io"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - blog.qmd
+    right:
+      - icon: rss
+        href: index.xml
 
 format:
   html:
