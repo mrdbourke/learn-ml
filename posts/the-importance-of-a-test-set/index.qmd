@@ -96,6 +96,7 @@ So a list of general recommendations for anyone working on a custom machine lear
 * **Have everyone on the team interact/visualize at least 100 random pieces of *real* data.** Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.
 * **Spend time crafting a high quality test set with data samples from your actual use case.** This test set may turn out to be the most valuable piece of your project.
 * **Continually review the test set overtime to make sure it matches your production use case.** As your product changes over time, so should the data you’re testing your models on.
+* **Evaluating a model is just as important, if not more important than training a model.** If you train a model but it performs poorly on the test set, is it really a useable model? 
 * **Traditional software has tests and so should machine learning-powered software.** Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data *as* code, and so, if in software development you test your code, in ML, you should test your models/data. 
 	* **Note:** Test cases in ML are also often referred to as “evals” or “evaluations”. 
 

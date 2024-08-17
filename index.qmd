@@ -2,7 +2,21 @@
 title: "Learn ML"
 ---
 
-2024-08-10
+## 2024-08-18
+
+Another [blog post](https://www.learnml.io/posts/the-importance-of-a-test-set/) is live!
+
+This importance of a test set.
+
+This is fun.
+
+Will eventually sort out the rest of the pages on this website.
+
+E.g about, this homepage, tutorials and more.
+
+Slowly but surely.
+
+## 2024-08-10
 
 More coming soon. 
 
