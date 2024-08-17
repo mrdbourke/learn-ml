@@ -1,0 +1,118 @@
+---
+title: "The importance of a test set"
+description: "Real samples. Real places."
+author: "Daniel Bourke"
+date: "2024-08-18"
+categories: [custom datasets, data, getting started, ml, ml projects]
+image: "./images/ml-lesson-learned-internet-data-vs-real-life-data.png"
+---
+
+Had a phone call the other day with someone who wanted advice for their machine learning project.
+
+Their problem was a sound classification problem for 800 unique classes.
+
+Of course, the trend in the past may be to focus on which model to use.
+
+However, with modern deep learning models (e.g. 2020 onwards), it’s likely a large enough transformer or convolutional neural network (CNN) model would be able to distinguish the 800 unique classes given enough data.
+
+With that being said, how could you test this?
+
+The classes they wanted to identify were specific to the product they offer.
+
+In this case, animal sound identification. 
+
+They told me an existing dataset for their problem did exist online, however, the available dataset didn’t exactly offer the scenario they wanted to use the model in.
+
+And so my main piece of advice for starting the project (or any custom machine learning project) was for them to **spend time crafting a test set well aligned with their exact use case**.
+
+As in, if you expect your model is going to used in scenario X, collect data samples for scenario X and put them in your testing set.
+
+::: {.callout-tip collapse="true"}
+
+## Three datasets refresher
+
+As a reminder, in a machine learning project one of the first things that often happens is a dataset gets split into three sets:
+
+1. **Training set** - This is where a target model will try to learn the relationship between inputs and outputs. For example, does the input text “C0ngratl4tions!!1 You’ve won $23243248 d0llar9!!!” belong to the output label `spam` or `not_spam`?
+2. **Validation set** - This where you can try to tweak the hyperparameters (settings) of your model to try and improve its results on the training set.
+3. **Test set** - The model never sees these samples during training. You evaluate the model on this split to see how well the patterns learned on the training set generalise to unseen problems. 
+
+An analogy would be that if a model is akin to a university student, the training set is the course materials, the validation set is the practice exam and the test set is the final exam.
+
+All three sets are exclusive of each other.
+
+For example, no samples which are in the training set should be in either of the other sets and vice versa. 
+
+::: 
+
+Yes, crafting a high-quality test set can be time consuming.
+
+But it’s one of the most valuable things you can do in any machine learning project. 
+
+Having a high quality test means you can experiment with different models, training setups and training data inputs (real and synthetic) and still be confident that if your model does well on your test set, these results will closely transfer to real-world use cases.
+
+For example, my brother and I work on a food education app called [Nutrify](https://nutrify.app).
+
+The premise of Nutrify is simple, take a photo of food with your smartphone, the food gets identified by computer vision and information about the food is displayed.
+
+For the computer vision models, we use a Vision Transformer (ViT) architecture, pretrained on ImageNet and then fine-tuned on our own custom dataset of food images and deployed to run on device (CoreML models running on iPhones, these models work offline with no internet connection). 
+
+Our custom dataset contains a mixture of open-source internet images and real-life images (e.g. photos we’ve manually taken ourselves).
+
+The real-life images are crucial for our use case.
+
+Since when you find images of food on the internet, they are often not the same kind of images you might take when you’re quickly taking a photo of your meal or at supermarket when using Nutrify.
+
+![When building a task-specific machine learning product, you can often get pretty good results with publically available data (e.g. images/text from the internet). However, if your task deviates from or doesn't involve data readily available on the internet, you will often get to a point where you have to start collecting your own data sources for both training and testing. Source of image is a slide form a [talk I gave on MLops lessons learned building Nutrify](https://youtu.be/pZXt-flSAZo?si=SKvS66OyGc7UIKIh).](./images/ml-lesson-learned-internet-data-vs-real-life-data.png){fig-alt="The image contrasts 'Internet data' with 'Real life data.' On the left side, a Google search for 'red apple' shows various digital images and icons of apples, labeled as 'Internet data (Ok to get started).' On the right side, there are four photos of real apples in different contexts, labeled as 'Real life data (Required for reliability).' The message emphasizes that while internet data can be useful initially, real-life data is essential for accuracy and reliability." fig-align="center" width=100% .lightbox}
+
+Food images on the internet are often high-quality shot with a digital camera from specific angles with good lighting or drawing-style images.
+
+Whereas food images taken on a smartphone are often less high-quality from almost any angle with multiple lighting conditions.
+
+And so, to make sure that our model doesn’t perform poorly when we deploy it to the Nutrify app, our test dataset is constructed with many real-life images that we’ve taken of food with the iPhone camera.
+
+So we know that if our model performs well on our test set, this performance *should* (note: should italicised because at the end of the day machine learning is still probabilistic and there are no guarantees) be mirrored in the real-world.
+
+We also test it ourselves many times in real-world situations before pushing the update live.
+
+However, once you get to a certain scale, testing every real-world situation can be hard/impossible to do yourself.
+
+This is where you’ll have to rely on your test set being well aligned with your actual problem.
+
+There’s a wonderful Japanese principle which captures this idea called [*Genchi Genbustu*](https://en.wikipedia.org/wiki/Genchi_Genbutsu) or “real things, real places” or “go an see for yourself”. 
+
+In essence, make sure your test set comprises of samples containing “real things in real places”.
+
+## Summary
+
+Having a good test set relates to almost any machine learning workflow.
+
+Whether you’re building a small application to identify foods with computer vision.
+
+Or whether you’re building a large language model (LLM) or self-driving car system to serve millions of customers.
+
+So a list of general recommendations for anyone working on a custom machine learning project:
+
+* **Have everyone on the team interact/visualize at least 100 random pieces of *real* data.** Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.
+* **Spend time crafting a high quality test set with data samples from your actual use case.** This test set may turn out to be the most valuable piece of your project.
+* **Continually review the test set overtime to make sure it matches your production use case.** As your product changes over time, so should the data you’re testing your models on.
+* **Traditional software has tests and so should machine learning-powered software.** Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data *as* code, and so, if in software development you test your code, in ML, you should test your models/data. 
+	* **Note:** Test cases in ML are also often referred to as “evals” or “evaluations”. 
+
+## FAQ
+
+### What about the training set?
+
+Ho ho! You are so right. Everything said for the test set can also be said for the training set. 
+
+Especially “real things, real places”. 
+
+This article focuses mainly on the test set as an example because of the availability of large pretrained foundation models. 
+
+These models often perform very well in their given domain, however, can sometimes fail on very specific non-internet data (e.g. your custom dataset).
+
+So if you’re finding that your models are performing poorly on your task-specific test set, it may be time to collect more task-specific training samples and fine-tune your model on those.
+
+## Extra reading
+
+* Hamel Husain’s blog post [*Your AI project needs evals*](https://hamel.dev/blog/posts/evals/) is an excellent read with a very a similar theme to this one and specific example use cases in the world of LLMs.
