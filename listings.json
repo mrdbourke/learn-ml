@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/the-importance-of-a-test-set/index.html",
       "/posts/2024-08-10-start-ml-blog/index.html"
     ]
   }

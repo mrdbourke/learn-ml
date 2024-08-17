@@ -7,11 +7,11 @@
     "text": "Yo!\nI’d like to start a machine learning blog.\nA website too.\nWith ML concepts + code, interesting learns, tutorials and more.\nI’ve got my other blog too which is excellent for less-tech orientated things (but also some tech things).\nAnyway, this website will be more focused on the pure ML side of things.\nFor now, there’s not much.\nBut I’ll slowly build it up over time.\nBest not to overthink these things.\nThat’s the big killer.\nJust create what your heart sings to create.\nIt’s the best long-term strategy.\nNow, first thing is first, get the domain (learnml.io) and get the website live.\nThat’s some motivation to keep going!\nPublish, publish, publish!"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learn ML",
     "section": "",
-    "text": "Start of learnml.io\n\n\n\n\n\n\nml\n\n\ngetting started\n\n\n\n\n\n\n\n\n\nAug 10, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\nNo matching items"
+    "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
   },
   {
     "objectID": "about.html",
@@ -28,10 +28,38 @@
     "text": "How is this website made?\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Learn ML",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
+    "text": "The importance of a test set\n\n\n\n\n\n\ncustom datasets\n\n\ndata\n\n\ngetting started\n\n\nml\n\n\nml projects\n\n\n\nReal samples. Real places.\n\n\n\n\n\nAug 18, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nStart of learnml.io\n\n\n\n\n\n\nml\n\n\ngetting started\n\n\n\n\n\n\n\n\n\nAug 10, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/the-importance-of-a-test-set/index.html",
+    "href": "posts/the-importance-of-a-test-set/index.html",
+    "title": "The importance of a test set",
+    "section": "",
+    "text": "Had a phone call the other day with someone who wanted advice for their machine learning project.\nTheir problem was a sound classification problem for 800 unique classes.\nOf course, the trend in the past may be to focus on which model to use.\nHowever, with modern deep learning models (e.g. 2020 onwards), it’s likely a large enough transformer or convolutional neural network (CNN) model would be able to distinguish the 800 unique classes given enough data.\nWith that being said, how could you test this?\nThe classes they wanted to identify were specific to the product they offer.\nIn this case, animal sound identification.\nThey told me an existing dataset for their problem did exist online, however, the available dataset didn’t exactly offer the scenario they wanted to use the model in.\nAnd so my main piece of advice for starting the project (or any custom machine learning project) was for them to spend time crafting a test set well aligned with their exact use case.\nAs in, if you expect your model is going to used in scenario X, collect data samples for scenario X and put them in your testing set.\nYes, crafting a high-quality test set can be time consuming.\nBut it’s one of the most valuable things you can do in any machine learning project.\nHaving a high quality test means you can experiment with different models, training setups and training data inputs (real and synthetic) and still be confident that if your model does well on your test set, these results will closely transfer to real-world use cases.\nFor example, my brother and I work on a food education app called Nutrify.\nThe premise of Nutrify is simple, take a photo of food with your smartphone, the food gets identified by computer vision and information about the food is displayed.\nFor the computer vision models, we use a Vision Transformer (ViT) architecture, pretrained on ImageNet and then fine-tuned on our own custom dataset of food images and deployed to run on device (CoreML models running on iPhones, these models work offline with no internet connection).\nOur custom dataset contains a mixture of open-source internet images and real-life images (e.g. photos we’ve manually taken ourselves).\nThe real-life images are crucial for our use case.\nSince when you find images of food on the internet, they are often not the same kind of images you might take when you’re quickly taking a photo of your meal or at supermarket when using Nutrify.\nFood images on the internet are often high-quality shot with a digital camera from specific angles with good lighting or drawing-style images.\nWhereas food images taken on a smartphone are often less high-quality from almost any angle with multiple lighting conditions.\nAnd so, to make sure that our model doesn’t perform poorly when we deploy it to the Nutrify app, our test dataset is constructed with many real-life images that we’ve taken of food with the iPhone camera.\nSo we know that if our model performs well on our test set, this performance should (note: should italicised because at the end of the day machine learning is still probabilistic and there are no guarantees) be mirrored in the real-world.\nWe also test it ourselves many times in real-world situations before pushing the update live.\nHowever, once you get to a certain scale, testing every real-world situation can be hard/impossible to do yourself.\nThis is where you’ll have to rely on your test set being well aligned with your actual problem.\nThere’s a wonderful Japanese principle which captures this idea called Genchi Genbustu or “real things, real places” or “go an see for yourself”.\nIn essence, make sure your test set comprises of samples containing “real things in real places”."
+  },
+  {
+    "objectID": "posts/the-importance-of-a-test-set/index.html#summary",
+    "href": "posts/the-importance-of-a-test-set/index.html#summary",
+    "title": "The importance of a test set",
+    "section": "Summary",
+    "text": "Summary\nHaving a good test set relates to almost any machine learning workflow.\nWhether you’re building a small application to identify foods with computer vision.\nOr whether you’re building a large language model (LLM) or self-driving car system to serve millions of customers.\nSo a list of general recommendations for anyone working on a custom machine learning project:\n\nHave everyone on the team interact/visualize at least 100 random pieces of real data. Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.\nSpend time crafting a high quality test set with data samples from your actual use case. This test set may turn out to be the most valuable piece of your project.\nContinually review the test set overtime to make sure it matches your production use case. As your product changes over time, so should the data you’re testing your models on.\nTraditional software has tests and so should machine learning-powered software. Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data as code, and so, if in software development you test your code, in ML, you should test your models/data.\n\nNote: Test cases in ML are also often referred to as “evals” or “evaluations”."
+  },
+  {
+    "objectID": "posts/the-importance-of-a-test-set/index.html#faq",
+    "href": "posts/the-importance-of-a-test-set/index.html#faq",
+    "title": "The importance of a test set",
+    "section": "FAQ",
+    "text": "FAQ\n\nWhat about the training set?\nHo ho! You are so right. Everything said for the test set can also be said for the training set.\nEspecially “real things, real places”.\nThis article focuses mainly on the test set as an example because of the availability of large pretrained foundation models.\nThese models often perform very well in their given domain, however, can sometimes fail on very specific non-internet data (e.g. your custom dataset).\nSo if you’re finding that your models are performing poorly on your task-specific test set, it may be time to collect more task-specific training samples and fine-tune your model on those."
+  },
+  {
+    "objectID": "posts/the-importance-of-a-test-set/index.html#extra-reading",
+    "href": "posts/the-importance-of-a-test-set/index.html#extra-reading",
+    "title": "The importance of a test set",
+    "section": "Extra reading",
+    "text": "Extra reading\n\nHamel Husain’s blog post Your AI project needs evals is an excellent read with a very a similar theme to this one and specific example use cases in the world of LLMs."
   }
 ]
