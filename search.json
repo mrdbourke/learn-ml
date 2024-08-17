@@ -11,6 +11,20 @@
     "href": "index.html",
     "title": "Learn ML",
     "section": "",
+    "text": "Another blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Learn ML",
+    "section": "",
+    "text": "Another blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
+  },
+  {
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
+    "title": "Learn ML",
+    "section": "2024-08-10",
     "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
   },
   {
@@ -46,7 +60,7 @@
     "href": "posts/the-importance-of-a-test-set/index.html#summary",
     "title": "The importance of a test set",
     "section": "Summary",
-    "text": "Summary\nHaving a good test set relates to almost any machine learning workflow.\nWhether you’re building a small application to identify foods with computer vision.\nOr whether you’re building a large language model (LLM) or self-driving car system to serve millions of customers.\nSo a list of general recommendations for anyone working on a custom machine learning project:\n\nHave everyone on the team interact/visualize at least 100 random pieces of real data. Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.\nSpend time crafting a high quality test set with data samples from your actual use case. This test set may turn out to be the most valuable piece of your project.\nContinually review the test set overtime to make sure it matches your production use case. As your product changes over time, so should the data you’re testing your models on.\nTraditional software has tests and so should machine learning-powered software. Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data as code, and so, if in software development you test your code, in ML, you should test your models/data.\n\nNote: Test cases in ML are also often referred to as “evals” or “evaluations”."
+    "text": "Summary\nHaving a good test set relates to almost any machine learning workflow.\nWhether you’re building a small application to identify foods with computer vision.\nOr whether you’re building a large language model (LLM) or self-driving car system to serve millions of customers.\nSo a list of general recommendations for anyone working on a custom machine learning project:\n\nHave everyone on the team interact/visualize at least 100 random pieces of real data. Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.\nSpend time crafting a high quality test set with data samples from your actual use case. This test set may turn out to be the most valuable piece of your project.\nContinually review the test set overtime to make sure it matches your production use case. As your product changes over time, so should the data you’re testing your models on.\nEvaluating a model is just as important, if not more important than training a model. If you train a model but it performs poorly on the test set, is it really a useable model?\nTraditional software has tests and so should machine learning-powered software. Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data as code, and so, if in software development you test your code, in ML, you should test your models/data.\n\nNote: Test cases in ML are also often referred to as “evals” or “evaluations”."
   },
   {
     "objectID": "posts/the-importance-of-a-test-set/index.html#faq",
