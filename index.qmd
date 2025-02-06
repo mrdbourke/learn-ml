@@ -1,12 +1,12 @@
 ---
-title: "Learn ML"
+title: "Learning ML - Timeline"
 ---
 
-## 2025-02-05
+## 2025-02-06
 
 First blog post for 2025.
 
-A guide to different bounding box formats.
+A [guide to different bounding box formats](https://www.learnml.io/posts/a-guide-to-bounding-box-formats/).
 
 I've been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.
 
@@ -16,7 +16,7 @@ Either way, I wanted a resource to go through the major bounding box formats and
 
 I'd like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.
 
--
+--
 
 On another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon.
 

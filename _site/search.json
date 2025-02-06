@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Learn ML",
+    "title": "Learning ML - Timeline",
     "section": "",
-    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n\n\n\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
+    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n–\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
   },
   {
     "objectID": "blog.html",
@@ -65,14 +65,14 @@
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "Learn ML",
+    "title": "Learning ML - Timeline",
     "section": "",
-    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n\n\n\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
+    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n–\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
   },
   {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
-    "title": "Learn ML",
+    "title": "Learning ML - Timeline",
     "section": "2024-08-18",
     "text": "2024-08-18\nAnother blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
   },
@@ -184,7 +184,7 @@
   {
     "objectID": "index.html#section-2",
     "href": "index.html#section-2",
-    "title": "Learn ML",
+    "title": "Learning ML - Timeline",
     "section": "2024-08-10",
     "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
   },
