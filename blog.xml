@@ -617,8 +617,8 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <p>To practice, let’s now do all of the conversions above manually.</p>
 <p>We’ll also create the normalized version of each.</p>
 </section>
-<section id="manually-converting-bounding-boxes" class="level2">
-<h2 class="anchored" data-anchor-id="manually-converting-bounding-boxes">Manually Converting Bounding Boxes</h2>
+<section id="manually-converting-bounding-box-formats" class="level2">
+<h2 class="anchored" data-anchor-id="manually-converting-bounding-box-formats">Manually converting bounding box formats</h2>
 <p>Let’s start with our existing bounding box in <code>XYWH</code> format and convert it to <code>XYXY</code> and <code>CXCYWH</code>.</p>
 <div id="cell-10" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co" style="color: #5E5E5E;

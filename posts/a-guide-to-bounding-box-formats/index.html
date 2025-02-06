@@ -243,7 +243,7 @@ window.Quarto = {
   <li><a href="#different-box-formats" id="toc-different-box-formats" class="nav-link" data-scroll-target="#different-box-formats">Different box formats</a></li>
   <li><a href="#which-bounding-box-format-should-i-use" id="toc-which-bounding-box-format-should-i-use" class="nav-link" data-scroll-target="#which-bounding-box-format-should-i-use">Which bounding box format should I use?</a></li>
   <li><a href="#inspecting-an-example-bounding-box" id="toc-inspecting-an-example-bounding-box" class="nav-link" data-scroll-target="#inspecting-an-example-bounding-box">Inspecting an example bounding box</a></li>
-  <li><a href="#manually-converting-bounding-boxes" id="toc-manually-converting-bounding-boxes" class="nav-link" data-scroll-target="#manually-converting-bounding-boxes">Manually Converting Bounding Boxes</a></li>
+  <li><a href="#manually-converting-bounding-box-formats" id="toc-manually-converting-bounding-box-formats" class="nav-link" data-scroll-target="#manually-converting-bounding-box-formats">Manually converting bounding box formats</a></li>
   <li><a href="#creating-normalized-bounding-box-coordinates" id="toc-creating-normalized-bounding-box-coordinates" class="nav-link" data-scroll-target="#creating-normalized-bounding-box-coordinates">Creating normalized bounding box coordinates</a></li>
   <li><a href="#drawing-bounding-boxes-on-images" id="toc-drawing-bounding-boxes-on-images" class="nav-link" data-scroll-target="#drawing-bounding-boxes-on-images">Drawing bounding boxes on images</a>
   <ul class="collapse">
@@ -458,8 +458,8 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p>To practice, let’s now do all of the conversions above manually.</p>
 <p>We’ll also create the normalized version of each.</p>
 </section>
-<section id="manually-converting-bounding-boxes" class="level2">
-<h2 class="anchored" data-anchor-id="manually-converting-bounding-boxes">Manually Converting Bounding Boxes</h2>
+<section id="manually-converting-bounding-box-formats" class="level2">
+<h2 class="anchored" data-anchor-id="manually-converting-bounding-box-formats">Manually converting bounding box formats</h2>
 <p>Let’s start with our existing bounding box in <code>XYWH</code> format and convert it to <code>XYXY</code> and <code>CXCYWH</code>.</p>
 <div id="cell-10" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Our current box format is XYWH</span></span>
