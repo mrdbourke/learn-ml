@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>learn ml</title>
+<title>learnml.io</title>
 <link>https://www.learnml.io/blog.html</link>
 <atom:link href="https://www.learnml.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>a blog about learning machine learning</description>
@@ -29,9 +29,12 @@
 <figcaption>By the end of this post, we’ll have replicated this plot. Caption: An annotated image showing a metal bin with a bounding box around it, displaying absolute bounding box coordinates in different formats (XYYX, XYWH, CXCWH). The image includes reference points, axis labels, and a gloved hand putting a piece of trash in the bin, with a background of stairs and a wall.</figcaption>
 </figure>
 </div>
-<ul>
-<li>TK - add a link to run this in Google Colab + download the image + JSON item we’re using</li>
-</ul>
+<p><a target="_blank" href="https://colab.research.google.com/github/mrdbourke/learn-ml/blob/main/posts/a-guide-to-bounding-box-formats/index.ipynb"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a></p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> You can run this notebook in <a href="https://colab.research.google.com/github/mrdbourke/learn-ml/blob/main/posts/a-guide-to-bounding-box-formats/index.ipynb">Google Colab</a>, however, just beware you’ll have to <a href="https://github.com/mrdbourke/learn-ml/tree/main/posts/a-guide-to-bounding-box-formats/data">download the data</a>/add an image to work with (these are available in the post).</p>
+</blockquote>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>One of the most confusing things about getting into bounding box detection is the number of different formats that bounding boxes come in.</p>
 <p>That’s one of the big troubles in machine learning in general: figuring out what format your data should be in.</p>
 <p>This post explores the different kinds of bounding box formats with various examples.</p>
@@ -51,6 +54,7 @@
 <li><strong>Normalized</strong> - Values are between <code>[0, 1]</code> and are proportions of the image width and height. For example a normalized <code>(x1, y1)</code> coordinate of <code>(0.009, 0.215)</code> means the top left corner is <code>0.009 * image_width</code> pixels in on the x-axis and <code>0.215 * image_height</code> down on the y-axis. To convert absolute coordinates to normalized, you can divide x-axis values by the image width and y-axis values by the image height.</li>
 </ul>
 <p><img src="https://latex.codecogs.com/png.latex?%0Ax_%7B%5Ctext%7Bnormalized%7D%7D%20=%20%5Cfrac%7Bx_%7B%5Ctext%7Babsolute%7D%7D%7D%7B%5Ctext%7Bimage%5C_width%7D%7D%20%5Cquad%20y_%7B%5Ctext%7Bnormalized%7D%7D%20=%20%5Cfrac%7By_%7B%5Ctext%7Babsolute%7D%7D%7D%7B%5Ctext%7Bimage%5C_height%7D%7D%0A"></p>
+</section>
 <section id="different-box-formats" class="level2">
 <h2 class="anchored" data-anchor-id="different-box-formats">Different box formats</h2>
 <p>The following table contains a non-exhaustive list of some of the most common bounding box formats you’ll come across in the wild.</p>
@@ -107,7 +111,7 @@
 <section id="inspecting-an-example-bounding-box" class="level2">
 <h2 class="anchored" data-anchor-id="inspecting-an-example-bounding-box">Inspecting an example bounding box</h2>
 <p>Let’s open a single bounding box annotation and check it out.</p>
-<p>The following sample (TK - link) is a manually drawn bounding box using <a href="https://prodi.gy/">Prodigy</a> (a labelling tool) on an image of a person picking up a piece of trash (we’ll see the image soon).</p>
+<p>The following <a href="https://github.com/mrdbourke/learn-ml/blob/main/posts/a-guide-to-bounding-box-formats/data/trashify_demo_image_annotations.json">sample</a> is a manually drawn bounding box using <a href="https://prodi.gy/">Prodigy</a> (a labelling tool) on an <a href="https://github.com/mrdbourke/learn-ml/blob/main/posts/a-guide-to-bounding-box-formats/data/trashify_demo_image_for_box_format.jpeg">image</a> of a person picking up a piece of trash (we’ll see the image soon).</p>
 <p>For now, let’s inspect the file.</p>
 <p>It comes in <code>.json</code> format, so we can open it with Python’s <code>json</code> module.</p>
 <blockquote class="blockquote">
