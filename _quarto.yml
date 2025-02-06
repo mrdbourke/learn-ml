@@ -22,6 +22,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    clean-url: true
 
 
 
