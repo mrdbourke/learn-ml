@@ -21,12 +21,10 @@
 
 
 
-<section id="a-guide-to-bounding-box-formats-and-how-to-draw-them" class="level1">
-<h1>A Guide to Bounding Box Formats and How to Draw Them</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.learnml.io/posts/a-guide-to-bounding-box-formats/images/absolute_bounding_box_coordinates_plot.png" class="img-fluid figure-img"></p>
-<figcaption>By the end of this post, we’ll have replicated this plot. Caption: An annotated image showing a metal bin with a bounding box around it, displaying absolute bounding box coordinates in different formats (XYYX, XYWH, CXCWH). The image includes reference points, axis labels, and a gloved hand putting a piece of trash in the bin, with a background of stairs and a wall.</figcaption>
+<figcaption>By the end of this post, we’ll have replicated this plot. Extended caption: An annotated image showing a metal bin with a bounding box around it, displaying absolute bounding box coordinates in different formats (XYYX, XYWH, CXCWH). The image includes reference points, axis labels, and a gloved hand putting a piece of trash in the bin, with a background of stairs and a wall.</figcaption>
 </figure>
 </div>
 <p><a target="_blank" href="https://colab.research.google.com/github/mrdbourke/learn-ml/blob/main/posts/a-guide-to-bounding-box-formats/index.ipynb"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a></p>
@@ -4153,7 +4151,6 @@ font-style: inherit;">=</span>[box_colour]</span>
 <p>Happy detecting!</p>
 
 
-</section>
 </section>
 
  ]]></description>
