@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Learn ML",
     "section": "",
-    "text": "Another blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
+    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n\n\n\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
   },
   {
     "objectID": "blog.html",
@@ -67,14 +67,14 @@
     "href": "index.html#section",
     "title": "Learn ML",
     "section": "",
-    "text": "Another blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
+    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n\n\n\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
   },
   {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
     "title": "Learn ML",
-    "section": "2024-08-10",
-    "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
+    "section": "2024-08-18",
+    "text": "2024-08-18\nAnother blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
   },
   {
     "objectID": "posts/2025-02-05-a-guide-to-bounding-box-formats/a-guide-to-bounding-box-formats.html",
@@ -180,5 +180,12 @@
     "title": "A Guide to Bounding Box Formats and How to Draw Them",
     "section": "",
     "text": "The following table contains a non-exhaustive list of some of the most common bounding box formats you’ll come across in the wild.\n\n\n\nBox format\nDescription\nAbsolute Example\nNormalized Example\nSource\n\n\n\n\nXYXY\nDescribes the top left corner coordinates (x1, y1) as well as the bottom right corner coordinates of a box.  Also referred to as:  [x1, y1, x2, y2]  or  [x_min, y_min, x_max, y_max]\n[8.9, 275.3, 867.5, 964.0]\n[0.009, 0.215, 0.904, 0.753]\nPASCAL VOC Dataset uses the absolute version of this format, torchvision.utils.draw_bounding_boxes defaults to the absolute version of this format.\n\n\nXYWH\nDescribes the top left corner coordinates (x1, y1) as well as the width (box_width) and height (box_height) of the target box. The bottom right corners (x2, y2) are found by adding the width and height to the top left corner coordinates (x1 + box_width, y1 + box_height).  Also referred to as:  [x1, y1, box_width, box_height]  or  [x_min, y_min, box_width, box_height]\n[8.9, 275.3, 858.6, 688.7]\n[0.009, 0.215, 0.894, 0.538]\nThe COCO (Common Objects in Context) dataset uses the absolute version of this format, see the section under “bbox”.\n\n\nCXCYWH\nDescribes the center coordinates of the bounding box (center_x, center_y) as well as the width (box_width) and height (box_height) of the target box.  Also referred to as:  [center_x, center_y, box_width, box_height]\n[438.2, 619.65, 858.6, 688.7]\n[0.456, 0.484, 0.894, 0.538]\nNormalized version introduced in the YOLOv3 (You Only Look Once) paper and is used by many later forms of YOLO."
+  },
+  {
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
+    "title": "Learn ML",
+    "section": "2024-08-10",
+    "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
   }
 ]
