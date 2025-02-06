@@ -274,7 +274,10 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>One of the most confusing things about getting into bounding box detection is the number of different formats that bounding boxes come in.</p>
 <p>That’s one of the big troubles in machine learning in general: figuring out what format your data should be in.</p>
-<p>This post explores the different kinds of bounding box formats with various examples.</p>
+<p>I found this out whilst building an object detection model to power <a href="https://huggingface.co/spaces/mrdbourke/trashify_demo_v3">Trashify</a>, a small app which detects <code>bin</code>, <code>trash</code>, <code>hand</code> and gives you a point.</p>
+<p>My model’s loss was going down during training but the plotted boxes looked terrible.</p>
+<p>Turns out I was trying to plot boxes in the wrong <em>format</em>.</p>
+<p>In light of this, this post explores the different kinds of bounding box formats with various examples.</p>
 <p>Let’s start by going through different bounding box formats you might come across.</p>
 <p>All of the following examples are based on an image with the dimenions <code>(960, 1280)</code> or a width of <code>960</code> pixels and a height of <code>1280</code> pixels.</p>
 <p>Specifically, we’ll be using this image (right click it download it if you’d like to follow along):</p>
