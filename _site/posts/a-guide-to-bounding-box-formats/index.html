@@ -238,6 +238,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-is-a-bounding-box" id="toc-what-is-a-bounding-box" class="nav-link" data-scroll-target="#what-is-a-bounding-box">What is a bounding box?</a></li>
   <li><a href="#different-box-formats" id="toc-different-box-formats" class="nav-link" data-scroll-target="#different-box-formats">Different box formats</a></li>
   <li><a href="#which-bounding-box-format-should-i-use" id="toc-which-bounding-box-format-should-i-use" class="nav-link" data-scroll-target="#which-bounding-box-format-should-i-use">Which bounding box format should I use?</a></li>
   <li><a href="#inspecting-an-example-bounding-box" id="toc-inspecting-an-example-bounding-box" class="nav-link" data-scroll-target="#inspecting-an-example-bounding-box">Inspecting an example bounding box</a></li>
@@ -288,14 +289,29 @@ window.Quarto = {
 </figure>
 </div>
 <p>And all boxes assume the <code>(0, 0)</code> coordinate is in the top left of the image.</p>
-<p>For absolute versus normalized pixel values:</p>
+</section>
+<section id="what-is-a-bounding-box" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-bounding-box">What is a bounding box?</h2>
+<p>The goal of an object detection model is locate an item (e.g.&nbsp;a person, car, licence plate, defect on a part, food on a plate) in an image.</p>
+<p>One way to do this is to take an image, pass it through a computer vision model and then the model produces an output in the form <code>[class_name, x_min, y_min, x_max, y_max]</code> (this is one example format, there are more options).</p>
+<p>Where:</p>
 <ul>
-<li><strong>Absolute</strong> - Values are in the same format as the width and height dimensions. For example an <code>(x1, y1)</code> coordinate of <code>(8.9, 275.3)</code> means the top left corner is <code>8.9</code> pixels in on the x-axis, and <code>275.3</code> pixels down on the y-axis.</li>
-<li><strong>Normalized</strong> - Values are between <code>[0, 1]</code> and are proportions of the image width and height. For example a normalized <code>(x1, y1)</code> coordinate of <code>(0.009, 0.215)</code> means the top left corner is <code>0.009 * image_width</code> pixels in on the x-axis and <code>0.215 * image_height</code> down on the y-axis. To convert absolute coordinates to normalized, you can divide x-axis values by the image width and y-axis values by the image height.</li>
+<li><code>class_name</code> = The classification of the target item (e.g.&nbsp;<code>"car"</code>, <code>"person"</code>, <code>"banana"</code>, <code>"piece_of_trash"</code>, this could be almost anything).</li>
+<li><code>x_min</code> = The <code>x</code> value of the top left corner of the box.</li>
+<li><code>y_min</code> = The <code>y</code> value of the top left corner of the box.</li>
+<li><code>x_max</code> = The <code>x</code> value of the bottom right corner of the box.</li>
+<li><code>y_max</code> = The <code>y</code> value of the bottom right corner of the box.</li>
+</ul>
+<p>In our example, let’s say we were trying to locate the <code>"bin"</code> in the image.</p>
+<p>An example bounding box output from a computer vision model might look like the following:</p>
+<ul>
+<li><strong>Absolute</strong> coordinate form: <code>["bin", 8.9, 275.3, 867.5, 964.0]</code> - Values are in the same format as the width and height dimensions. For example an <code>(x1, y1)</code> coordinate of <code>(8.9, 275.3)</code> means the top left corner is <code>8.9</code> pixels in on the x-axis, and <code>275.3</code> pixels down on the y-axis. (coordinates represent pixel values on the image).</li>
+<li><strong>Normalized</strong> coordinate form: <code>["bin", 0.009, 0.215, 0.904, 0.753]</code> - Values are between <code>[0, 1]</code> and are proportions of the image width and height. For example a normalized <code>(x1, y1)</code> coordinate of <code>(0.009, 0.215)</code> means the top left corner is <code>0.009 * image_width</code> pixels in on the x-axis and <code>0.215 * image_height</code> down on the y-axis. To convert absolute coordinates to normalized, you can divide x-axis values by the image width and y-axis values by the image height.</li>
 </ul>
 <p><span class="math display">\[
 x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_{\text{normalized}} = \frac{y_{\text{absolute}}}{\text{image\_height}}
 \]</span></p>
+<p>How to train a model to produce these outputs is the topic of another blog post, for now, let’s focus on the different bounding box formats.</p>
 </section>
 <section id="different-box-formats" class="level2">
 <h2 class="anchored" data-anchor-id="different-box-formats">Different box formats</h2>
@@ -359,7 +375,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <blockquote class="blockquote">
 <p><strong>Note:</strong> Not all bounding box annotations will come in JSON format, this is just an example. You may get many labels in a big text file with one annotation per line. The point is that bounding box annotations usually come <em>separate</em> from the actual image itself.</p>
 </blockquote>
-<div id="cell-3" class="cell" data-execution_count="1">
+<div id="cell-4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Annotation from Prodigy (comes in XYWH format)</span></span>
@@ -407,7 +423,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p>But we get the following: * <code>image_path</code> - Path to the target image (I created this myself for simplicity but in practice you might use something like a unique identifier). * <code>file_name</code> - A unique identifier for the image (UUID), we’d use something like this if we were to store many images in a database so they would all have different names. * <code>readme</code> - Information about the image format (note: not all annotations will have this, I’ve created it to help for this example). * <code>annotations</code> - A list of dictionaries containing various bounding box annotation(s) (in this case, only one) with a UUID for each annotation, coordinates for different points and <code>label</code> for the class name. * <code>x</code> and <code>y</code> - These are the top left corner coordinates of a target box (<code>[x1, y1]</code>). * <code>image_size</code> - The original size of the image on which the bounding box was drawn in <code>[height, width]</code> format.</p>
 <p>Comparing our <code>annotations</code> object with the table of different box formats above, it looks like we can extract the absolute <code>XYWH</code> format from the <code>annotations["annotations"]</code> key.</p>
 <p>Let’s try!</p>
-<div id="cell-5" class="cell" data-execution_count="2">
+<div id="cell-6" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get annotations dictionary</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>annotations_dict <span class="op">=</span> annotations[<span class="st">"annotations"</span>][<span class="dv">0</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -432,7 +448,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p>Or we can do so by using existing conversion utilities such as <a href="https://pytorch.org/vision/main/generated/torchvision.ops.box_convert.html"><code>torchvision.ops.box_convert(boxes, in_fmt, out_fmt)</code></a>.</p>
 <p>Where: * <code>boxes</code> = a <code>torch.tensor</code> of boxes to convert. * <code>in_fmt</code> = the input format of the input boxes (e.g.&nbsp;<code>xyxy</code>, <code>xywh</code> or <code>cxcywh</code>). * <code>out_fmt</code> = the output format of the output boxes (e.g.&nbsp;<code>xyxy</code>, <code>xywh</code> or <code>cxcywh</code>).</p>
 <p>Let’s convert our existing <code>box_xywh</code> to the other formats.</p>
-<div id="cell-7" class="cell" data-execution_count="3">
+<div id="cell-8" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision.ops <span class="im">import</span> box_convert</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -459,7 +475,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <section id="manually-converting-bounding-box-formats" class="level2">
 <h2 class="anchored" data-anchor-id="manually-converting-bounding-box-formats">Manually converting bounding box formats</h2>
 <p>Let’s start with our existing bounding box in <code>XYWH</code> format and convert it to <code>XYXY</code> and <code>CXCYWH</code>.</p>
-<div id="cell-10" class="cell" data-execution_count="4">
+<div id="cell-11" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Our current box format is XYWH</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"[INFO] Current box in XYWH format: </span><span class="sc">{</span>box_xywh<span class="sc">}</span><span class="ss"> ([x_min, y_min, box_width, box_height])"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -472,7 +488,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <li>Add the <code>box_width</code> to <code>x_min</code> to create <code>x_max</code>.</li>
 <li>Add the <code>box_height</code> to <code>y_min</code> to create <code>y_max</code>.</li>
 </ol>
-<div id="cell-12" class="cell" data-execution_count="5">
+<div id="cell-13" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert XYWH to XYXY (or [x_min, y_min, x_max, y_max])</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>box_xyxy <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>] <span class="co"># start with zeros</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -501,7 +517,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <li>Add <code>0.5 * box_height</code> to <code>y_min</code> to create <code>box_center_y</code>.</li>
 <li>The <code>box_width</code> and <code>box_height</code> can remain the same as our <code>XYWH</code> box.</li>
 </ol>
-<div id="cell-14" class="cell" data-execution_count="6">
+<div id="cell-15" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert XYWH to CXCYWH (or [center_x, center_y, width, height])</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>box_cxcywh <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>] <span class="co"># start with zeros</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -532,7 +548,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p>However, sometimes we’ll find our boxes in normalized format.</p>
 <p>Normalized format means that the values are: * In the range <code>[0, 1]</code>. * <code>x</code> coordinates have been divided by the image width. * <code>y</code> coordinates have been divided by the image height. * <code>box_width</code> has been divided by the image width. * <code>box_height</code> has been divided by the image height.</p>
 <p>Let’s start by importing an image and getting its height and width.</p>
-<div id="cell-17" class="cell" data-execution_count="7">
+<div id="cell-18" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image </span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Image is a sample image from Trashify project: https://huggingface.co/spaces/mrdbourke/trashify_demo_v3 </span></span>
@@ -572,7 +588,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <li>Divide <code>box_height</code> by the image height.</li>
 </ol>
 <p>We’ll round all values to 3 decimal places (to prevent values of <code>0.009270833333333334</code>, this is less precise but looks cleaner).</p>
-<div id="cell-19" class="cell" data-execution_count="8">
+<div id="cell-20" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Divide x coordiantes by the image width</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>box_top_left_x_normalized <span class="op">=</span> <span class="bu">round</span>(box_top_left_x <span class="op">/</span> img_width, <span class="dv">3</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>box_bottom_right_x_normalized <span class="op">=</span> <span class="bu">round</span>((box_top_left_x <span class="op">+</span> box_width) <span class="op">/</span> img_width, <span class="dv">3</span>) <span class="co"># (x_min + box_width) / img_width</span></span>
@@ -620,7 +636,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 </div>
 <p>Outstanding!</p>
 <p>Using these normalized coordinates, let’s create normalized versions of our <code>XYWH</code>, <code>XYXY</code> and <code>CXCYWH</code> boxes.</p>
-<div id="cell-21" class="cell" data-execution_count="9">
+<div id="cell-22" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create normalized XYWH box ([x_min, y_min, box_width, box_height])</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>box_xywh_normalized <span class="op">=</span> [box_top_left_x_normalized, box_top_left_y_normalized, box_width_normalized, box_height_normalized]</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -658,7 +674,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 </ol>
 <p>How about we try each?</p>
 <p>First we’ll set up a couple of variables we can reuse.</p>
-<div id="cell-24" class="cell" data-execution_count="10">
+<div id="cell-25" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the box label from the annotations dictionary</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>box_label <span class="op">=</span> annotations_dict[<span class="st">"label"</span>]</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -675,7 +691,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <section id="drawing-a-bounding-box-with-pil" class="level3">
 <h3 class="anchored" data-anchor-id="drawing-a-bounding-box-with-pil">Drawing a bounding box with <code>PIL</code></h3>
 <p>Let’s use the <code>PIL.ImageDraw.rectangle</code> method to draw a box on our <code>PIL.Image</code>.</p>
-<div id="cell-26" class="cell" data-execution_count="11">
+<div id="cell-27" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image, ImageDraw, ImageFont</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Image is a sample image from Trashify project: https://huggingface.co/spaces/mrdbourke/trashify_demo_v3 </span></span>
@@ -732,13 +748,13 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p><strong>Note:</strong> All coordinates in the following plots/images are listed in (x, y) format. Meaning the x-value comes first, followed by the y-value. Also, the following plot(s) took a fairly large amount of trial and error to get looking just right. So don’t worry too much if it takes you a while to replicate something similar.</p>
 </blockquote>
 <p>First, we’ll create some values we can reuse.</p>
-<div id="cell-29" class="cell" data-execution_count="12">
+<div id="cell-30" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set sizing and colour options</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>CIRCLE_SIZE <span class="op">=</span> <span class="dv">75</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>CIRCLE_COLOUR <span class="op">=</span> <span class="st">"green"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And now let’s make an epic plot!</p>
-<div id="cell-31" class="cell" data-execution_count="13">
+<div id="cell-32" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1093,7 +1109,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p>To <code>CXCYWH</code> using the center point as well as the width and height of the bounding box.</p>
 <p>How about we reproduce the same plot, except this time we’ll use the normalized coordinates of the boxes?</p>
 <p>First, we’ll remind ourselves of the normalized coordinates (like all good machine learning cooking shows, we prepared these earlier).</p>
-<div id="cell-33" class="cell" data-execution_count="14">
+<div id="cell-34" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"[INFO] XYXY absolute, normalized: </span><span class="sc">{</span>box_xyxy<span class="sc">,</span> box_xyxy_normalized<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"[INFO] XYWH absolute, normalized: </span><span class="sc">{</span>box_xywh<span class="sc">,</span> box_xywh_normalized<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"[INFO] CXCYWH absolute, normalized: </span><span class="sc">{</span>box_cxcywh<span class="sc">,</span> box_cxcywh_normalized<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1104,7 +1120,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 </div>
 </div>
 <p>Now time to replicate the plot above, except this time with normalized values.</p>
-<div id="cell-35" class="cell" data-execution_count="15">
+<div id="cell-36" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create figure and axis with larger figure size</span></span>
@@ -1460,7 +1476,7 @@ x_{\text{normalized}} = \frac{x_{\text{absolute}}}{\text{image\_width}} \quad y_
 <p>Well… we’re only converting an image to a tensor, drawing boxes on that tensor and then converting the tensor back to an image.</p>
 <p>Easy!</p>
 <p>C’mon, let’s do it.</p>
-<div id="cell-38" class="cell" data-execution_count="16">
+<div id="cell-39" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision.ops <span class="im">import</span> box_convert</span>
