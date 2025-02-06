@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "learn ml"
+  title: "learnml.io"
   site-url: https://www.learnml.io
   description: a blog about learning machine learning
   twitter-card: true 
