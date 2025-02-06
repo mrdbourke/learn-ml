@@ -53,7 +53,7 @@
 <section id="what-is-a-bounding-box" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-bounding-box">What is a bounding box?</h2>
 <p>The goal of an object detection model is locate an item (e.g.&nbsp;a person, car, licence plate, defect on a part, food on a plate) in an image.</p>
-<p>One way to do this is to take an image, pass it through a computer vision model and then the model produces an output in the form <code>[class_name, x_min, y_min, x_max, y_max]</code> (this is one example format, there are more options).</p>
+<p>One way to do this is to take an image, pass it through a computer vision model and then the model produces an output in the form <code>[class_name, x_min, y_min, x_max, y_max]</code> or <code>[class_name, x1, y1, x2, y2]</code> (this is two ways to write the same example format, there are more formats, we’ll see these below).</p>
 <p>Where:</p>
 <ul>
 <li><code>class_name</code> = The classification of the target item (e.g.&nbsp;<code>"car"</code>, <code>"person"</code>, <code>"banana"</code>, <code>"piece_of_trash"</code>, this could be almost anything).</li>
@@ -65,8 +65,8 @@
 <p>In our example, let’s say we were trying to locate the <code>"bin"</code> in the image.</p>
 <p>An example bounding box output from a computer vision model might look like the following:</p>
 <ul>
-<li><strong>Absolute</strong> coordinate form: <code>["bin", 8.9, 275.3, 867.5, 964.0]</code> - Values are in the same format as the width and height dimensions. For example an <code>(x1, y1)</code> coordinate of <code>(8.9, 275.3)</code> means the top left corner is <code>8.9</code> pixels in on the x-axis, and <code>275.3</code> pixels down on the y-axis. (coordinates represent pixel values on the image).</li>
-<li><strong>Normalized</strong> coordinate form: <code>["bin", 0.009, 0.215, 0.904, 0.753]</code> - Values are between <code>[0, 1]</code> and are proportions of the image width and height. For example a normalized <code>(x1, y1)</code> coordinate of <code>(0.009, 0.215)</code> means the top left corner is <code>0.009 * image_width</code> pixels in on the x-axis and <code>0.215 * image_height</code> down on the y-axis. To convert absolute coordinates to normalized, you can divide x-axis values by the image width and y-axis values by the image height.</li>
+<li><strong>Absolute</strong> coordinate form: <code>["bin", 8.9, 275.3, 867.5, 964.0]</code> - Values are in the same format as the width and height dimensions. For example an <code>(x1, y1)</code> (or <code>(x_min, y_min)</code>) coordinate of <code>(8.9, 275.3)</code> means the top left corner is <code>8.9</code> pixels in on the x-axis, and <code>275.3</code> pixels down on the y-axis. (coordinates represent pixel values on the image).</li>
+<li><strong>Normalized</strong> coordinate form: <code>["bin", 0.009, 0.215, 0.904, 0.753]</code> - Values are between <code>[0, 1]</code> and are proportions of the image width and height. For example a normalized <code>(x1, y1)</code> (or <code>(x_min, y_min)</code>) coordinate of <code>(0.009, 0.215)</code> means the top left corner is <code>0.009 * image_width</code> pixels in on the x-axis and <code>0.215 * image_height</code> down on the y-axis. To convert absolute coordinates to normalized, you can divide x-axis values by the image width and y-axis values by the image height.</li>
 </ul>
 <p><img src="https://latex.codecogs.com/png.latex?%0Ax_%7B%5Ctext%7Bnormalized%7D%7D%20=%20%5Cfrac%7Bx_%7B%5Ctext%7Babsolute%7D%7D%7D%7B%5Ctext%7Bimage%5C_width%7D%7D%20%5Cquad%20y_%7B%5Ctext%7Bnormalized%7D%7D%20=%20%5Cfrac%7By_%7B%5Ctext%7Babsolute%7D%7D%7D%7B%5Ctext%7Bimage%5C_height%7D%7D%0A"></p>
 <p>How to train a model to produce these outputs is the topic of another blog post, for now, let’s focus on the different bounding box formats.</p>
