@@ -7,18 +7,11 @@
     "text": "A Gentle Guide to Intersection over Union (IoU)\n\n\n\n\n\n\nobject detection\n\n\ndata\n\n\ncomputer vision\n\n\nml\n\n\nml projects\n\n\n\nIoU is required for evaluating object detection models. But it can be a be tricky to get started with. This tutorial fixes that.\n\n\n\n\n\nApr 17, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nA Guide to Bounding Box Formats and How to Draw Them\n\n\n\n\n\n\nobject detection\n\n\ndata\n\n\ncomputer vision\n\n\nml\n\n\nml projects\n\n\n\nOne of the hardest parts of object detection is making sure your bounding boxes are in the right format. Let’s fix that.\n\n\n\n\n\nFeb 6, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nThe importance of a test set\n\n\n\n\n\n\ncustom datasets\n\n\ndata\n\n\ngetting started\n\n\nml\n\n\nml projects\n\n\n\nReal samples. Real places.\n\n\n\n\n\nAug 18, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nStart of learnml.io\n\n\n\n\n\n\nml\n\n\ngetting started\n\n\n\n\n\n\n\n\n\nAug 10, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/a-gentle-guide-to-intersection-over-union/index.html",
-    "href": "posts/a-gentle-guide-to-intersection-over-union/index.html",
-    "title": "A Gentle Guide to Intersection over Union (IoU)",
-    "section": "",
-    "text": "Welcome to a gentle introduction to IoU!\nIf you’ve ever worked on an object detection or localization task, you’ll have likely ran into IoU.\nAnd if you haven’t, well, that’s okay!\nThe goal of this post is to be a one stop shop for learning about IoU.\nThe code below is designed to be concise enough to get the idea but also compatible enough to perform your own IoU caculations if needed.\nAnyway, enough intro, let’s get into it!"
-  },
-  {
     "objectID": "posts/a-gentle-guide-to-intersection-over-union/index.html#introduction",
     "href": "posts/a-gentle-guide-to-intersection-over-union/index.html#introduction",
     "title": "A Gentle Guide to Intersection over Union (IoU)",
-    "section": "",
-    "text": "Welcome to a gentle introduction to IoU!\nIf you’ve ever worked on an object detection or localization task, you’ll have likely ran into IoU.\nAnd if you haven’t, well, that’s okay!\nThe goal of this post is to be a one stop shop for learning about IoU.\nThe code below is designed to be concise enough to get the idea but also compatible enough to perform your own IoU caculations if needed.\nAnyway, enough intro, let’s get into it!"
+    "section": "Introduction",
+    "text": "Introduction\nWelcome to a gentle introduction to IoU!\nIf you’ve ever worked on an object detection or localization task, you’ll have likely ran into IoU.\nAnd if you haven’t, well, that’s okay!\nThe goal of this post is to be a one stop shop for learning about IoU.\nThe code below is designed to be concise enough to get the idea but also compatible enough to perform your own IoU caculations if needed.\nAnyway, enough intro, let’s get into it!"
   },
   {
     "objectID": "posts/a-gentle-guide-to-intersection-over-union/index.html#what-is-iou",
