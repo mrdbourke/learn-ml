@@ -2700,7 +2700,7 @@ font-style: inherit;">"Various Boxes at Different IoU Thresholds"</span>)</span>
 <h3 class="anchored" data-anchor-id="getting-a-real-image-and-real-bounding-box-annotation">Getting a real image and real bounding box annotation</h3>
 <p>We’ll use an image from an object detection project I’ve worked on called <a href="https://www.learnhuggingface.com/notebooks/hugging_face_object_detection_tutorial">Trashify</a>, where the goal is to detect <code>["bin", "trash", "hand"]</code> in an image (if all 3 classes are present, you get +1 point) to encourage people to pick up trash in their local area.</p>
 <p>The annotations are made using <a href="https://prodi.gy/">Prodigy</a>, a labelling tool (there are many kinds of labelling tools out there, you could even get AI to generate a custom one for you).</p>
-<div id="cell-42" class="cell" data-outputid="189d80b5-6d84-489c-a3ff-4398a238862e">
+<div id="cell-42" class="cell" data-outputid="189d80b5-6d84-489c-a3ff-4398a238862e" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> os</span>
@@ -2803,7 +2803,7 @@ background-color: null;
 font-style: inherit;">/</span>trashify_demo_image_annotations.json</span></code></pre></div>
 </div>
 <p>Real image and box annotation downloaded!</p>
-<div id="cell-44" class="cell" data-outputid="f30d8301-18a9-4c30-d0fd-d4f9eda8745b">
+<div id="cell-44" class="cell" data-outputid="f30d8301-18a9-4c30-d0fd-d4f9eda8745b" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> PIL <span class="im" style="color: #00769E;
@@ -3003,10 +3003,10 @@ font-style: inherit;">=</span> plt.subplots()</span>
 <span id="cb34-10">ax.add_patch(annotation_rect)</span>
 <span id="cb34-11">ax.text(x<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>box_coordinates.x_min,</span>
+font-style: inherit;">=</span>real_box_coordinates.x_min,</span>
 <span id="cb34-12">        y<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>box_coordinates.y_min <span class="op" style="color: #5E5E5E;
+font-style: inherit;">=</span>real_box_coordinates.y_min <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -3229,7 +3229,7 @@ Box type: shrink | Box: Box(x_min=12.9, y_min=279.3, x_max=863.5, y_max=960.0) |
 </div>
 </div>
 <p>Boxes created, now let’s see what they look like!</p>
-<div id="cell-57" class="cell" data-outputid="298b5c1c-9260-433d-e07b-6a25e0ef9e8a">
+<div id="cell-57" class="cell" data-outputid="298b5c1c-9260-433d-e07b-6a25e0ef9e8a" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> matplotlib.patches <span class="im" style="color: #00769E;
@@ -4319,27 +4319,27 @@ background-color: null;
 font-style: inherit;">=</span> times</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[INFO] Time taken for 1 samples using batched IoU calculations: 0.0s
-[INFO] Time taken for 1 samples using one by one IoU calculations: 0.00157s
+[INFO] Time taken for 1 samples using one by one IoU calculations: 0.00181s
 [INFO] Total boxes calculated on (per function): 500
 
 [INFO] Time taken for 10 samples using batched IoU calculations: 0.0s
-[INFO] Time taken for 10 samples using one by one IoU calculations: 0.01514s
+[INFO] Time taken for 10 samples using one by one IoU calculations: 0.01475s
 [INFO] Total boxes calculated on (per function): 5000
 
 [INFO] Time taken for 100 samples using batched IoU calculations: 0.001s
-[INFO] Time taken for 100 samples using one by one IoU calculations: 0.14749s
+[INFO] Time taken for 100 samples using one by one IoU calculations: 0.14879s
 [INFO] Total boxes calculated on (per function): 50000
 
 [INFO] Time taken for 1000 samples using batched IoU calculations: 0.012s
-[INFO] Time taken for 1000 samples using one by one IoU calculations: 1.47593s
+[INFO] Time taken for 1000 samples using one by one IoU calculations: 1.47221s
 [INFO] Total boxes calculated on (per function): 500000
 
-[INFO] Time taken for 10000 samples using batched IoU calculations: 0.121s
-[INFO] Time taken for 10000 samples using one by one IoU calculations: 14.57437s
+[INFO] Time taken for 10000 samples using batched IoU calculations: 0.118s
+[INFO] Time taken for 10000 samples using one by one IoU calculations: 14.91115s
 [INFO] Total boxes calculated on (per function): 5000000
 
-CPU times: user 16.3 s, sys: 61.1 ms, total: 16.3 s
-Wall time: 16.3 s</code></pre>
+CPU times: user 16.6 s, sys: 79.1 ms, total: 16.7 s
+Wall time: 16.7 s</code></pre>
 </div>
 </div>
 <p>Woah! Looks like the batch IoU calculations perform far quicker than the one by one calculations.</p>
@@ -4420,11 +4420,11 @@ font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[INFO] Using batch_iou_time for 1 samples is 120.45x faster than using one_by_one_iou_time
-[INFO] Using batch_iou_time for 10 samples is 120.45x faster than using one_by_one_iou_time
-[INFO] Using batch_iou_time for 100 samples is 120.45x faster than using one_by_one_iou_time
-[INFO] Using batch_iou_time for 1000 samples is 120.45x faster than using one_by_one_iou_time
-[INFO] Using batch_iou_time for 10000 samples is 120.45x faster than using one_by_one_iou_time</code></pre>
+<pre><code>[INFO] Using batch_iou_time for 1 samples is 126.37x faster than using one_by_one_iou_time
+[INFO] Using batch_iou_time for 10 samples is 126.37x faster than using one_by_one_iou_time
+[INFO] Using batch_iou_time for 100 samples is 126.37x faster than using one_by_one_iou_time
+[INFO] Using batch_iou_time for 1000 samples is 126.37x faster than using one_by_one_iou_time
+[INFO] Using batch_iou_time for 10000 samples is 126.37x faster than using one_by_one_iou_time</code></pre>
 </div>
 </div>
 <p>Ok ok…</p>
@@ -4435,11 +4435,11 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <div id="cell-77" class="cell" data-outputid="c9260a4f-1b03-47ed-b88e-ab4fd71a319a" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1">results_dict</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
-<pre><code>{1: {'batch_iou_time': 0.0, 'one_by_one_iou_time': 0.00157},
- 10: {'batch_iou_time': 0.0, 'one_by_one_iou_time': 0.01514},
- 100: {'batch_iou_time': 0.001, 'one_by_one_iou_time': 0.14749},
- 1000: {'batch_iou_time': 0.012, 'one_by_one_iou_time': 1.47593},
- 10000: {'batch_iou_time': 0.121, 'one_by_one_iou_time': 14.57437}}</code></pre>
+<pre><code>{1: {'batch_iou_time': 0.0, 'one_by_one_iou_time': 0.00181},
+ 10: {'batch_iou_time': 0.0, 'one_by_one_iou_time': 0.01475},
+ 100: {'batch_iou_time': 0.001, 'one_by_one_iou_time': 0.14879},
+ 1000: {'batch_iou_time': 0.012, 'one_by_one_iou_time': 1.47221},
+ 10000: {'batch_iou_time': 0.118, 'one_by_one_iou_time': 14.91115}}</code></pre>
 </div>
 </div>
 <p>Beautiful!</p>
