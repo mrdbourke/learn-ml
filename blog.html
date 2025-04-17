@@ -130,10 +130,10 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <link rel="alternate" type="application/rss+xml" title="learnml.io" href="blog.xml" data-external="1"><meta property="og:title" content="Blog – learnml.io">
-<meta property="og:image" content="https://www.learnml.io/posts/a-guide-to-bounding-box-formats/images/bounding-box-formats-blog-post-cover.jpg">
+<meta property="og:image" content="https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/images/iou-blog-post-cover.jpg">
 <meta property="og:site_name" content="learnml.io">
 <meta name="twitter:title" content="Blog – learnml.io">
-<meta name="twitter:image" content="https://www.learnml.io/posts/a-guide-to-bounding-box-formats/images/bounding-box-formats-blog-post-cover.jpg">
+<meta name="twitter:image" content="https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/images/iou-blog-post-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -202,7 +202,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y29tcHV0ZXIlMjB2aXNpb24=">computer vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3VzdG9tJTIwZGF0YXNldHM=">custom datasets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YQ==">data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2V0dGluZyUyMHN0YXJ0ZWQ=">getting started <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWw=">ml <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bWwlMjBwcm9qZWN0cw==">ml projects <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b2JqZWN0JTIwZGV0ZWN0aW9u">object detection <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Y29tcHV0ZXIlMjB2aXNpb24=">computer vision <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y3VzdG9tJTIwZGF0YXNldHM=">custom datasets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YQ==">data <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Z2V0dGluZyUyMHN0YXJ0ZWQ=">getting started <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWw=">ml <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWwlMjBwcm9qZWN0cw==">ml projects <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b2JqZWN0JTIwZGV0ZWN0aW9u">object detection <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -216,7 +216,52 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="b2JqZWN0JTIwZGV0ZWN0aW9uJTJDZGF0YSUyQ2NvbXB1dGVyJTIwdmlzaW9uJTJDbWwlMkNtbCUyMHByb2plY3Rz" data-listing-date-sort="1738800000000" data-listing-file-modified-sort="1744866247614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3156">
+<div class="quarto-post image-right" data-index="0" data-categories="b2JqZWN0JTIwZGV0ZWN0aW9uJTJDZGF0YSUyQ2NvbXB1dGVyJTIwdmlzaW9uJTJDbWwlMkNtbCUyMHByb2plY3Rz" data-listing-date-sort="1744848000000" data-listing-file-modified-sort="1744866284391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3473">
+<div class="thumbnail">
+<p><a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external"></a></p><a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/a-gentle-guide-to-intersection-over-union/images/iou-blog-post-cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">A Gentle Guide to Intersection over Union (IoU)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('b2JqZWN0JTIwZGV0ZWN0aW9u'); return false;">
+object detection
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">
+data
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXIlMjB2aXNpb24='); return false;">
+computer vision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">
+ml
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bWwlMjBwcm9qZWN0cw=='); return false;">
+ml projects
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">IoU is required for evaluating object detection models. But it can be a be tricky to get started with. This tutorial fixes that.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">
+<div class="listing-date">
+Apr 17, 2025
+</div>
+<div class="listing-author">
+Daniel Bourke
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="b2JqZWN0JTIwZGV0ZWN0aW9uJTJDZGF0YSUyQ2NvbXB1dGVyJTIwdmlzaW9uJTJDbWwlMkNtbCUyMHByb2plY3Rz" data-listing-date-sort="1738800000000" data-listing-file-modified-sort="1744866284454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3156">
 <div class="thumbnail">
 <p><a href="./posts/a-guide-to-bounding-box-formats/index.html" class="no-external"></a></p><a href="./posts/a-guide-to-bounding-box-formats/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/a-guide-to-bounding-box-formats/images/bounding-box-formats-blog-post-cover.jpg" class="thumbnail-image"></p>
@@ -261,7 +306,7 @@ Daniel Bourke
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y3VzdG9tJTIwZGF0YXNldHMlMkNkYXRhJTJDZ2V0dGluZyUyMHN0YXJ0ZWQlMkNtbCUyQ21sJTIwcHJvamVjdHM=" data-listing-date-sort="1723939200000" data-listing-file-modified-sort="1744866247619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1348">
+<div class="quarto-post image-right" data-index="2" data-categories="Y3VzdG9tJTIwZGF0YXNldHMlMkNkYXRhJTJDZ2V0dGluZyUyMHN0YXJ0ZWQlMkNtbCUyQ21sJTIwcHJvamVjdHM=" data-listing-date-sort="1723939200000" data-listing-file-modified-sort="1744866284458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1348">
 <div class="thumbnail">
 <p><a href="./posts/the-importance-of-a-test-set/index.html" class="no-external"></a></p><a href="./posts/the-importance-of-a-test-set/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/the-importance-of-a-test-set/images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="thumbnail-image"></p>
@@ -306,7 +351,7 @@ Daniel Bourke
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWwlMkNnZXR0aW5nJTIwc3RhcnRlZA==" data-listing-date-sort="1723248000000" data-listing-file-modified-sort="1744866247535" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="quarto-post image-right" data-index="3" data-categories="bWwlMkNnZXR0aW5nJTIwc3RhcnRlZA==" data-listing-date-sort="1723248000000" data-listing-file-modified-sort="1744866284376" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <div class="thumbnail">
 <p><a href="./posts/2024-08-10-start-ml-blog/index.html" class="no-external"></a></p><a href="./posts/2024-08-10-start-ml-blog/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
