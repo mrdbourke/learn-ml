@@ -9,7 +9,7 @@
 <link>https://www.learnml.io/blog.html</link>
 <atom:link href="https://www.learnml.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>a blog about learning machine learning</description>
-<generator>quarto-1.6.40</generator>
+<generator>quarto-1.6.43</generator>
 <lastBuildDate>Thu, 06 Feb 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A Guide to Bounding Box Formats and How to Draw Them</title>
