@@ -1,0 +1,43 @@
+{
+    "image_path": "trashify_demo_image_for_box_format.jpeg",
+    "file_name": "7c9b2934-23bc-46c5-8e9f-c2a66948b653.jpeg",
+    "readme": "Demo image for displaying box formats on. Box coordinates in annotations dict come in absolute XYWH format. Image size is in (height, width) format.",
+    "annotations": [
+        {
+            "id": "4226a4fb-12b2-4e16-b29d-b33d667048d1",
+            "label": "bin",
+            "color": "magenta",
+            "x": 8.9,
+            "y": 275.3,
+            "height": 688.7,
+            "width": 858.6,
+            "center": [
+                438.2,
+                619.65
+            ],
+            "type": "rect",
+            "points": [
+                [
+                    8.9,
+                    275.3
+                ],
+                [
+                    8.9,
+                    964
+                ],
+                [
+                    867.5,
+                    964
+                ],
+                [
+                    867.5,
+                    275.3
+                ]
+            ]
+        }
+    ],
+    "image_size": [
+        1280,
+        960
+    ]
+}

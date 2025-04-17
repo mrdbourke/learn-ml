@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.learnml.io/posts/the-importance-of-a-test-set/index.html</loc>
-    <lastmod>2025-02-03T00:46:44.561Z</lastmod>
+    <loc>https://www.learnml.io/blog.html</loc>
+    <lastmod>2025-04-17T02:02:14.783Z</lastmod>
   </url>
   <url>
     <loc>https://www.learnml.io/index.html</loc>
-    <lastmod>2025-02-06T02:24:42.249Z</lastmod>
+    <lastmod>2025-04-17T02:02:14.783Z</lastmod>
   </url>
   <url>
-    <loc>https://www.learnml.io/blog.html</loc>
-    <lastmod>2025-02-03T00:46:44.561Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/about.html</loc>
-    <lastmod>2025-02-03T00:46:44.561Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/posts/2025-02-05-a-guide-to-bounding-box-formats/a-guide-to-bounding-box-formats.html</loc>
-    <lastmod>2025-02-05T06:00:44.449Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/posts/2024-08-10-start-ml-blog/index.html</loc>
-    <lastmod>2025-02-03T00:46:44.561Z</lastmod>
+    <loc>https://www.learnml.io/posts/the-importance-of-a-test-set/index.html</loc>
+    <lastmod>2025-04-17T02:02:14.820Z</lastmod>
   </url>
   <url>
     <loc>https://www.learnml.io/posts/a-guide-to-bounding-box-formats/index.html</loc>
-    <lastmod>2025-02-06T04:51:43.219Z</lastmod>
+    <lastmod>2025-04-17T02:02:14.818Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/index.html</loc>
+    <lastmod>2025-04-17T05:03:25.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/2024-08-10-start-ml-blog/index.html</loc>
+    <lastmod>2025-04-17T02:02:14.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/about.html</loc>
+    <lastmod>2025-04-17T02:02:14.783Z</lastmod>
   </url>
 </urlset>
