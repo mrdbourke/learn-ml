@@ -4,6 +4,8 @@ project:
 website:
   title: "learnml.io"
   site-url: https://www.learnml.io
+  repo-url: "https://github.com/mrdbourke/learn-ml"
+  repo-actions: [edit, issue]
   description: a blog about learning machine learning
   twitter-card: true 
   open-graph: true
@@ -23,6 +25,8 @@ format:
     css: styles.css
     toc: true
     clean-url: true
+    code-tools:
+      source: repo
 
 
 

@@ -21,6 +21,7 @@
 
 
 
+<p><a target="_blank" href="https://colab.research.google.com/github/mrdbourke/learn-ml/blob/main/posts/a-gentle-guide-to-intersection-over-union/index.ipynb"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a></p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to a gentle introduction to IoU!</p>
