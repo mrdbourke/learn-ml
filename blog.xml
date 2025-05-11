@@ -9,7 +9,7 @@
 <link>https://www.learnml.io/blog.html</link>
 <atom:link href="https://www.learnml.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>a blog about learning machine learning</description>
-<generator>quarto-1.6.43</generator>
+<generator>quarto-1.7.30</generator>
 <lastBuildDate>Thu, 17 Apr 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A Gentle Guide to Intersection over Union (IoU)</title>
@@ -388,7 +388,7 @@ font-style: inherit;">self</span>.y_max)</span></code></pre></div>
 </div>
 <p>Beautiful!</p>
 <p>Now let’s make an example box and inspect its properties.</p>
-<div id="cell-10" class="cell" data-outputid="b0596b7c-5724-40f2-f134-da1c2452cd17" data-execution_count="2">
+<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b0596b7c-5724-40f2-f134-da1c2452cd17" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Make an example box</span></span>
@@ -499,7 +499,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </ul>
 <p>Why a ground truth box and a prediction box?</p>
 <p>Because IoU values are usually calculated between ground truth and prediction boxes to measure <strong>how well a prediction captures a ground truth label</strong>.</p>
-<div id="cell-12" class="cell" data-outputid="d58a04cd-4c41-4b8e-d7f9-330386c5cd1b" data-execution_count="3">
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d58a04cd-4c41-4b8e-d7f9-330386c5cd1b" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Create box_1 - this will be our ground truth box</span></span>
@@ -657,7 +657,7 @@ font-style: inherit;">/</span> union_area</span>
 <h3 class="anchored" data-anchor-id="creating-a-function-to-calculate-the-iou-of-two-boxes">Creating a function to calculate the IoU of two boxes</h3>
 <p>Rather than write out IoU calculations by hand each time, let’s make a function to do it for us.</p>
 <p>We’ll also add the functionality to return the coordinates of the intersection box (if there is one) so we can plot it if we like.</p>
-<div id="cell-15" class="cell" data-outputid="2d520ad7-17d6-4ba2-9c0f-4da896aafb6b" data-execution_count="4">
+<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2d520ad7-17d6-4ba2-9c0f-4da896aafb6b" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -954,7 +954,7 @@ font-style: inherit;">return</span> (center_x, center_y)</span></code></pre></di
 </div>
 <p>Nice!</p>
 <p>Now we can use our <code>calculate_iou</code> function along with some <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.patches.Rectangle.html"><code>matplotlib.patches.Rectangle</code></a> instances to help us visualize our synthetic boxes.</p>
-<div id="cell-19" class="cell" data-outputid="e9c572d0-d265-406a-cb9b-ab5359b7ebbe" data-execution_count="6">
+<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:452}}" data-outputid="e9c572d0-d265-406a-cb9b-ab5359b7ebbe" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Write code to plot box_1 and box_2 and highlight the IoU value</span></span>
@@ -1286,7 +1286,7 @@ font-style: inherit;">=</span>box_2)</span></code></pre></div>
 <p>To expand our horizons, let’s create multiple boxes to visualize the IoU calculation with different levels of overlap.</p>
 <p>We’ll create these in comparison to the ground truth <code>box_1</code>.</p>
 <p>Feel free to change the values below as you please.</p>
-<div id="cell-22" class="cell" data-outputid="58a3e04a-376d-4b13-ad9e-5b4d3a57bca2" data-execution_count="7">
+<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="58a3e04a-376d-4b13-ad9e-5b4d3a57bca2" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Low IoU box (50 pixels across and down from box_1)</span></span>
@@ -1347,7 +1347,7 @@ font-style: inherit;">250</span>)</span>
 </div>
 <p>Two new boxes created!</p>
 <p>Now how do <code>box_3</code> and <code>box_4</code> compare to <code>box_1</code>?</p>
-<div id="cell-24" class="cell" data-outputid="e7e09a4e-2abb-4282-a75a-2ee3a6122f71" data-execution_count="8">
+<div id="cell-24" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="e7e09a4e-2abb-4282-a75a-2ee3a6122f71" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Calculate IoU</span></span>
@@ -1396,7 +1396,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <p>Wonderful!</p>
 <p>Let’s plot these in a similar way to before.</p>
 <p>We’ll consider <code>box_1</code> the ground truth and compare <code>box_2</code>, <code>box_3</code> and <code>box_4</code> to it as example predictions (we’ll also compare <code>box_1</code> to itself as a baseline).</p>
-<div id="cell-26" class="cell" data-outputid="c189de64-d704-4c99-d974-3422d74a91e9" data-execution_count="9">
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:807}}" data-outputid="c189de64-d704-4c99-d974-3422d74a91e9" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Plot all boxes and their IoUs against box_1</span></span>
@@ -1768,7 +1768,7 @@ font-style: inherit;"># Show the plot</span></span>
 <p>In other words: 1. Calculate mAP with IoU threshold 0.5 (all boxes with IoU under 0.5 discarded). 2. Calculate mAP with IoU threshold 0.55 (all boxes with IoU under 0.55 discarded). 3. … 3. Repeat until 0.95 is reached at steps of 0.05 (0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95). 4. Average the mAP at all thresholds to get the overall mAP.</p>
 <p>To visualize IoU at various levels, let’s write a function to take in an existing bounding box to use as reference and generate a new bounding box which either grows larger, shrinks or shifts until it reaches a target IoU threshold.</p>
 <p>For example, say we input <code>box_1</code> and tell it to <code>"grow"</code> until it reaches an IoU of 0.5, our function will continue to expand <code>box_1</code>’s parameters in a new box until it reaches an IoU of 0.5.</p>
-<div id="cell-29" class="cell" data-outputid="edcf9a1f-f86f-4c3a-aa32-080c168e2034" data-execution_count="10">
+<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="edcf9a1f-f86f-4c3a-aa32-080c168e2034" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> copy</span>
@@ -2165,7 +2165,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </div>
 <p>Nice!</p>
 <p>We’ve altered <code>box_1</code> into <code>new_box</code>, now let’s see how they look using our <code>plot_two_boxes_with_iou()</code> function.</p>
-<div id="cell-31" class="cell" data-outputid="4961fda4-cf14-4233-fda0-c6a34ba9d89d" data-execution_count="11">
+<div id="cell-31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:452}}" data-outputid="4961fda4-cf14-4233-fda0-c6a34ba9d89d" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">plot_two_boxes_with_iou(box_1<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span>box_1,</span>
@@ -2310,7 +2310,7 @@ font-style: inherit;">return</span> iou_thresholds_and_boxes</span></code></pre>
 </div>
 <p>Box generation function ready!</p>
 <p>Let’s try it out.</p>
-<div id="cell-35" class="cell" data-outputid="0087434b-1a6b-447f-e6fa-6a4ae92539e8" data-execution_count="13">
+<div id="cell-35" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0087434b-1a6b-447f-e6fa-6a4ae92539e8" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Try out our function</span></span>
@@ -2448,7 +2448,7 @@ Box type: shrink | Box: Box(x_min=51.0, y_min=51.0, x_max=149.0, y_max=149.0) | 
 <p>We know higher IoU is better.</p>
 <p>But how much better?</p>
 <p>Let’s write some visualization code so we can visualize our synthetic boxes across various IoU thresholds.</p>
-<div id="cell-38" class="cell" data-outputid="9bf992a3-64ca-4000-bdaa-a76a3254aed9" data-execution_count="14">
+<div id="cell-38" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:756}}" data-outputid="9bf992a3-64ca-4000-bdaa-a76a3254aed9" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Plot all boxes with different IoU scores + different alteration modes</span></span>
@@ -2700,7 +2700,7 @@ font-style: inherit;">"Various Boxes at Different IoU Thresholds"</span>)</span>
 <h3 class="anchored" data-anchor-id="getting-a-real-image-and-real-bounding-box-annotation">Getting a real image and real bounding box annotation</h3>
 <p>We’ll use an image from an object detection project I’ve worked on called <a href="https://www.learnhuggingface.com/notebooks/hugging_face_object_detection_tutorial">Trashify</a>, where the goal is to detect <code>["bin", "trash", "hand"]</code> in an image (if all 3 classes are present, you get +1 point) to encourage people to pick up trash in their local area.</p>
 <p>The annotations are made using <a href="https://prodi.gy/">Prodigy</a>, a labelling tool (there are many kinds of labelling tools out there, you could even get AI to generate a custom one for you).</p>
-<div id="cell-42" class="cell" data-outputid="189d80b5-6d84-489c-a3ff-4398a238862e" data-execution_count="15">
+<div id="cell-42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="189d80b5-6d84-489c-a3ff-4398a238862e" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> os</span>
@@ -2803,7 +2803,7 @@ background-color: null;
 font-style: inherit;">/</span>trashify_demo_image_annotations.json</span></code></pre></div>
 </div>
 <p>Real image and box annotation downloaded!</p>
-<div id="cell-44" class="cell" data-outputid="f30d8301-18a9-4c30-d0fd-d4f9eda8745b" data-execution_count="16">
+<div id="cell-44" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:452}}" data-outputid="f30d8301-18a9-4c30-d0fd-d4f9eda8745b" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> PIL <span class="im" style="color: #00769E;
@@ -2849,7 +2849,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 <p>Awesome, looks like we’ve got a 960x1280 (width x height) image taken on a iPhone (I know this because I took the image :D).</p>
 <p>Now let’s inspect the assosciated label file, it’s common practice to have a label file in JSON format containing many different annotations.</p>
 <p>In our case, our annotation file <code>"trashify_demo_image_annotations.json"</code> contains just one annotation.</p>
-<div id="cell-46" class="cell" data-outputid="eb8b7437-f502-4829-c81a-534e63d04976" data-execution_count="17">
+<div id="cell-46" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="eb8b7437-f502-4829-c81a-534e63d04976" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> json</span>
@@ -2882,7 +2882,7 @@ font-style: inherit;">open</span>(annotations_path))</span>
 </div>
 <p>Wonderful, it looks like we get our box coordinates in <code>XYWH</code> format.</p>
 <p>We can convert this to <code>XYXY</code> format and create a <code>Box</code> instance for our annotation.</p>
-<div id="cell-48" class="cell" data-outputid="648b8ea4-4c0a-47e6-ab28-f28cec9a5b50" data-execution_count="18">
+<div id="cell-48" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="648b8ea4-4c0a-47e6-ab28-f28cec9a5b50" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Get the bounding box parameters</span></span>
@@ -2968,7 +2968,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </div>
 </div>
 <p>Let’s visualize!</p>
-<div id="cell-50" class="cell" data-outputid="cd8a48e6-9922-49a5-f323-d97eb1126d97" data-execution_count="19">
+<div id="cell-50" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:437}}" data-outputid="cd8a48e6-9922-49a5-f323-d97eb1126d97" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Plot the box on the image</span></span>
@@ -3053,7 +3053,7 @@ font-style: inherit;">=</span>real_box_coordinates)</span></code></pre></div>
 <p>Synthetic boxes created from our real box coordinates, tick!</p>
 <p>Now let’s inspect them.</p>
 <p>We’ll create <code>x_max_plot_value</code> and <code>y_max_plot_value</code> variables to keep track of the size of the plots we want.</p>
-<div id="cell-55" class="cell" data-outputid="48000cff-fa6e-4a6f-ea9a-08a2e8f77c70" data-execution_count="21">
+<div id="cell-55" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="48000cff-fa6e-4a6f-ea9a-08a2e8f77c70" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Get max values from the generated boxes to adjust the plotting sizes</span></span>
@@ -3229,7 +3229,7 @@ Box type: shrink | Box: Box(x_min=12.9, y_min=279.3, x_max=863.5, y_max=960.0) |
 </div>
 </div>
 <p>Boxes created, now let’s see what they look like!</p>
-<div id="cell-57" class="cell" data-outputid="298b5c1c-9260-433d-e07b-6a25e0ef9e8a" data-execution_count="22">
+<div id="cell-57" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:756}}" data-outputid="298b5c1c-9260-433d-e07b-6a25e0ef9e8a" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> matplotlib.patches <span class="im" style="color: #00769E;
@@ -3723,7 +3723,7 @@ font-style: inherit;">return</span> iou_matrix</span></code></pre></div>
 <p>Wonderful!</p>
 <p>Now our <code>batch_iou</code> function isn’t limited to only comparing one box to another, it can do <em>many</em> to <em>many</em> boxes.</p>
 <p>Let’s create some ground truth and prediction boxes in the form of NumPy arrays.</p>
-<div id="cell-62" class="cell" data-outputid="076c964d-786b-4588-8e26-6555a0b3d513" data-execution_count="24">
+<div id="cell-62" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="076c964d-786b-4588-8e26-6555a0b3d513" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Use a random seed for reproducibility</span></span>
@@ -3837,7 +3837,7 @@ font-style: inherit;">10</span>, :])</span></code></pre></div>
 </div>
 </div>
 <p>Now let’s use our <code>batch_iou</code> function to calculate an IoU matrix comparing the <code>pred_boxes</code> to the <code>gt_boxes</code>.</p>
-<div id="cell-64" class="cell" data-outputid="c85d9752-c4f3-4de4-b85b-4f866980e494" data-execution_count="25">
+<div id="cell-64" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="c85d9752-c4f3-4de4-b85b-4f866980e494" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Create IoU matrix</span></span>
@@ -3861,7 +3861,7 @@ font-style: inherit;">=</span>gt_boxes)</span>
 <p>For example, if we want the IoU score of prediction at index <code>0</code> and ground truth at index <code>0</code> (the first object in each <code>pred_boxes</code> and <code>gt_boxes</code> array), we can use <code>iou_matrix[0, 0]</code>.</p>
 <p>Or if we wanted the prediction at index <code>31</code> and the ground truth at index <code>3</code> we could use <code>iou_matrix[31, 3]</code>.</p>
 <p>Let’s get the first prediction and ground truth indexes, turn them into a <code>Box</code> dataclass and then compare them with <code>calculate_iou</code>.</p>
-<div id="cell-66" class="cell" data-outputid="c2fed0ab-2e85-4d84-96f0-2bed2ed29c60" data-execution_count="26">
+<div id="cell-66" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="c2fed0ab-2e85-4d84-96f0-2bed2ed29c60" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Get first ground truth and pred box</span></span>
@@ -4011,7 +4011,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </div>
 </div>
 <p>Now to make sure our numbers line up, let’s compare the IoU score from our <code>calculate_iou</code> function to the IoU score for the box at <code>[0, 0]</code> (prediction index <code>0</code>, ground truth index <code>0</code>) in our <code>iou_matrix</code>.</p>
-<div id="cell-68" class="cell" data-outputid="b91a77ab-58b2-481b-dd33-a2c84cd14e26" data-execution_count="27">
+<div id="cell-68" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b91a77ab-58b2-481b-dd33-a2c84cd14e26" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1">iou_0_0_from_matrix <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="bu" style="color: null;
@@ -4041,7 +4041,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </div>
 </div>
 <p>Are they the same?</p>
-<div id="cell-70" class="cell" data-outputid="2f8e36e6-5924-4c74-82ff-b8909574ced4" data-execution_count="28">
+<div id="cell-70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2f8e36e6-5924-4c74-82ff-b8909574ced4" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
@@ -4068,7 +4068,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="running-a-speed-test-across-different-numbers-of-samples">Running a speed test across different numbers of samples</h3>
 <p>To run our speed test we’ll create a list containing different numbers of image samples (e.g.&nbsp;1, 10, 100, 1000…).</p>
 <p>Then we’ll test how long it takes for each IoU function, <code>calculate_iou</code> and <code>batch_iou</code> to calculate the IoU scores of our <code>pred_boxes</code> (100 preds per sample) and <code>gt_boxes</code> (5 ground truth boxes per sample).</p>
-<div id="cell-73" class="cell" data-outputid="a724a890-0db2-4353-8146-730b32e4128f" data-execution_count="29">
+<div id="cell-73" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="a724a890-0db2-4353-8146-730b32e4128f" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%%</span>time</span>
@@ -4344,7 +4344,7 @@ Wall time: 16.7 s</code></pre>
 </div>
 <p>Woah! Looks like the batch IoU calculations perform far quicker than the one by one calculations.</p>
 <p>Let’s write some code to confirm which is faster and by how much.</p>
-<div id="cell-75" class="cell" data-outputid="0c8774dc-628f-4ae9-a56e-66fb38796b14" data-execution_count="30">
+<div id="cell-75" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0c8774dc-628f-4ae9-a56e-66fb38796b14" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Find the faster times for each number of samples</span></span>
@@ -4432,7 +4432,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <p>On Google Colab, I noticed a 100x+ speed up using <code>batch_iou</code> versus <code>calculate_iou</code> (speedup factors will depend on the hardware you’re using).</p>
 <p>How about we visualize the results in a plot?</p>
 <p>First, we’ll check out our <code>results_dict</code>.</p>
-<div id="cell-77" class="cell" data-outputid="c9260a4f-1b03-47ed-b88e-ab4fd71a319a" data-execution_count="31">
+<div id="cell-77" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="c9260a4f-1b03-47ed-b88e-ab4fd71a319a" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1">results_dict</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>{1: {'batch_iou_time': 0.0, 'one_by_one_iou_time': 0.00181},
@@ -4444,7 +4444,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </div>
 <p>Beautiful!</p>
 <p>Now let’s write some code to visualize our results.</p>
-<div id="cell-79" class="cell" data-outputid="aff134b2-70c2-4cb3-c18d-1fec12af00ef" data-execution_count="32">
+<div id="cell-79" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:707}}" data-outputid="aff134b2-70c2-4cb3-c18d-1fec12af00ef" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
