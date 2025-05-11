@@ -2,6 +2,18 @@
 title: "Learning ML - Timeline"
 ---
 
+## 2025-04-17
+
+Continuing on from the previous bounding box formats post, another object detection themed post with a [hands-on guide for IoU](https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/) (Intersection over Union).
+
+IoU measures how much two bounding boxes overlap.
+
+It's commonly used to evaluate an object detection model's predictions in comparison to the ground truth labels.
+
+Wherever you see the term "mAP" (Mean Average Precision, commonly seen reported for object detection models/papers), chances are, IoU is being used.
+
+More on mAP soon.
+
 ## 2025-02-06
 
 First blog post for 2025.
