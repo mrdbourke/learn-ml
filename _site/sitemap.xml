@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://www.learnml.io/index.html</loc>
-    <lastmod>2025-04-17T02:02:14.783Z</lastmod>
+    <lastmod>2025-05-30T23:58:15.576Z</lastmod>
   </url>
   <url>
     <loc>https://www.learnml.io/posts/the-importance-of-a-test-set/index.html</loc>
@@ -27,5 +27,17 @@
   <url>
     <loc>https://www.learnml.io/about.html</loc>
     <lastmod>2025-04-17T02:02:14.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/apache-detection-models/index.html</loc>
+    <lastmod>2025-05-30T23:55:48.259Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/glossary.html</loc>
+    <lastmod>2025-05-20T05:16:46.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/apache-object-detection-models/index.html</loc>
+    <lastmod>2025-05-30T23:55:48.259Z</lastmod>
   </url>
 </urlset>

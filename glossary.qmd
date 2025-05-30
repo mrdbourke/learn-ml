@@ -1,0 +1,22 @@
+# Machine learning glossary
+
+## Hyperparameters
+
+**Hyperparameters** are a set of values or settings that can be human-adjusted in the training of a machine learning model.
+
+For example, learning rate (TK - add link for LR), this can be manually set at a value of `learning_rate=0.001` or `learning_rate=0.0001` and then programmatically adjusted over time.
+
+The best values for hyperparameters are rarely known ahead of time and are often found experimentally.
+
+For example, you might find a batch size of `128` to be too large for the hardware you're using.
+
+So you reduce the batch size to `64` and get better throughput. 
+
+Different values for hyperparameters training on the same model and data can end with vastly different results.
+
+Tuning hyperparameters takes practice and experimentation. Many machine learning papers report the values they use for different hyperparameters so that their results are reproducible.
+
+Where possible, it's a good idea to start with default values reported from a reliable source and then adjust over time as you begin to work on your own problems.
+
+## TK - Loss curves
+

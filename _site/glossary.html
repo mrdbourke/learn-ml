@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning ML - Timeline – learnml.io</title>
+<title>glossary – learnml.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,11 +70,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Learning ML - Timeline – learnml.io">
-<meta property="og:description" content="a blog about learning machine learning">
+<meta property="og:title" content="learnml.io">
 <meta property="og:site_name" content="learnml.io">
-<meta name="twitter:title" content="Learning ML - Timeline – learnml.io">
-<meta name="twitter:description" content="a blog about learning machine learning">
+<meta name="twitter:title" content="learnml.io">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -96,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -130,77 +128,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2025-05-31</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2025-04-17</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2025-02-06</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2024-08-18</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2024-08-10</a></li>
+  <li><a href="#machine-learning-glossary" id="toc-machine-learning-glossary" class="nav-link active" data-scroll-target="#machine-learning-glossary">Machine learning glossary</a>
+  <ul class="collapse">
+  <li><a href="#hyperparameters" id="toc-hyperparameters" class="nav-link" data-scroll-target="#hyperparameters">Hyperparameters</a></li>
+  <li><a href="#tk---loss-curves" id="toc-tk---loss-curves" class="nav-link" data-scroll-target="#tk---loss-curves">TK - Loss curves</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/glossary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Learning ML - Timeline</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/mrdbourke/learn-ml/blob/main/index.qmd"><i class="bi"></i> Code</button></div></div>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/mrdbourke/learn-ml/blob/main/glossary.qmd"><i class="bi"></i> Code</button></div></div>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2025-05-31</h2>
-<p>Started collecting high-performing Apache 2.0 (or MIT) licensed object detection models in a post.</p>
-<p>These models perform on par or better than YOLO equivalents except have a more permissive license to use, even commercially.</p>
-<p>The collection <a href="https://www.learnml.io/posts/apache-object-detection-models/">here</a>.</p>
+<section id="machine-learning-glossary" class="level1">
+<h1>Machine learning glossary</h1>
+<section id="hyperparameters" class="level2">
+<h2 class="anchored" data-anchor-id="hyperparameters">Hyperparameters</h2>
+<p><strong>Hyperparameters</strong> are a set of values or settings that can be human-adjusted in the training of a machine learning model.</p>
+<p>For example, learning rate (TK - add link for LR), this can be manually set at a value of <code>learning_rate=0.001</code> or <code>learning_rate=0.0001</code> and then programmatically adjusted over time.</p>
+<p>The best values for hyperparameters are rarely known ahead of time and are often found experimentally.</p>
+<p>For example, you might find a batch size of <code>128</code> to be too large for the hardware you’re using.</p>
+<p>So you reduce the batch size to <code>64</code> and get better throughput.</p>
+<p>Different values for hyperparameters training on the same model and data can end with vastly different results.</p>
+<p>Tuning hyperparameters takes practice and experimentation. Many machine learning papers report the values they use for different hyperparameters so that their results are reproducible.</p>
+<p>Where possible, it’s a good idea to start with default values reported from a reliable source and then adjust over time as you begin to work on your own problems.</p>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2025-04-17</h2>
-<p>Continuing on from the previous bounding box formats post, another object detection themed post with a <a href="https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/">hands-on guide for IoU</a> (Intersection over Union).</p>
-<p>IoU measures how much two bounding boxes overlap.</p>
-<p>It’s commonly used to evaluate an object detection model’s predictions in comparison to the ground truth labels.</p>
-<p>Wherever you see the term “mAP” (Mean Average Precision, commonly seen reported for object detection models/papers), chances are, IoU is being used.</p>
-<p>More on mAP soon.</p>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">2025-02-06</h2>
-<p>First blog post for 2025.</p>
-<p>A <a href="https://www.learnml.io/posts/a-guide-to-bounding-box-formats/">guide to different bounding box formats</a>.</p>
-<p>I’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.</p>
-<p>You’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).</p>
-<p>Either way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.</p>
-<p>I’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.</p>
-<p>–</p>
-<p>On another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon.</p>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">2024-08-18</h2>
-<p>Another <a href="https://www.learnml.io/posts/the-importance-of-a-test-set/">blog post</a> is live!</p>
-<p>This importance of a test set.</p>
-<p>This is fun.</p>
-<p>Will eventually sort out the rest of the pages on this website.</p>
-<p>E.g about, this homepage, tutorials and more.</p>
-<p>Slowly but surely.</p>
-</section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4">2024-08-10</h2>
-<p>More coming soon.</p>
-<p>Just getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.</p>
-<p>See the <a href="https://www.learnml.io/posts/2024-08-10-start-ml-blog/">start blog post</a> for more.</p>
+<section id="tk---loss-curves" class="level2">
+<h2 class="anchored" data-anchor-id="tk---loss-curves">TK - Loss curves</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -659,4 +618,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/glossary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

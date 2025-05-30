@@ -10,7 +10,80 @@
 <atom:link href="https://www.learnml.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>a blog about learning machine learning</description>
 <generator>quarto-1.7.25</generator>
-<lastBuildDate>Wed, 16 Apr 2025 14:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 30 May 2025 14:00:00 GMT</lastBuildDate>
+<item>
+  <title>Apache 2.0 Open Source Object Detection Models</title>
+  <dc:creator>Daniel Bourke</dc:creator>
+  <link>https://www.learnml.io/posts/apache-object-detection-models/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The following is a collection of high-perofmring object detection models with permissive licenses (e.g.&nbsp;<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>, <a href="https://opensource.org/license/mit">MIT</a>).</p>
+<p>Why collect these?</p>
+<p>After diving into the world of object detection, you’ll probably run into YOLO (You Only Look Once) models.</p>
+<p>These models perform very well, however, they often come with the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0</a> license.</p>
+<p>I’m not a lawyer but when I read this license, it seems that using code (including models) from repos containing this license results in you having to publish your own code under AGPL-3.0 as well.</p>
+<p>This means if you’re a startup or a business using a AGPL-3.0 model and your app uses that model in a certain way, you must publish the app code as open-source under AGPL-3.0 too.</p>
+<p>TL;DR</p>
+<p>If you want to keep your source code closed source or just generally want a more permissive license, use Apache 2.0 or MIT code/models.</p>
+<p>Again, I’m not a lawyer but as a developer, I just prefer using things I know aren’t gonna come back to bite me.</p>
+<section id="apache-2.0-or-mit-licensed-object-detection-models" class="level2">
+<h2 class="anchored" data-anchor-id="apache-2.0-or-mit-licensed-object-detection-models">Apache 2.0 or MIT licensed object detection models</h2>
+<p>I’ve personally vetted the following to perform on par or better than almost any YOLO variant for real-time object detection.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Code/Models</th>
+<th>Paper</th>
+<th>License</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RF-DETR (Roboflow DETR)</td>
+<td><a href="https://github.com/roboflow/rf-detr">GitHub</a></td>
+<td>-</td>
+<td>Apache 2.0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>RT-DETRv2 (Real-time DETR)</td>
+<td><a href="https://github.com/lyuwenyu/RT-DETR">GitHub</a>, <a href="https://huggingface.co/docs/transformers/main/en/model_doc/rt_detr_v2">Hugging Face</a></td>
+<td><a href="https://arxiv.org/abs/2407.17140">arXiv</a></td>
+<td>Apache 2.0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>D-FINE (Fine‑grained Distribution Refinement)</td>
+<td><a href="https://github.com/Peterande/D-FINE">GitHub</a>, <a href="https://huggingface.co/docs/transformers/model_doc/d_fine">Hugging Face</a></td>
+<td><a href="https://arxiv.org/abs/2410.13842">arXiv</a></td>
+<td>Apache 2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li>DETR = DEctection TRansformer (using the Transformer model architecture for object detection)</li>
+<li>Real-time object detection = models capable of identifying objects in image(s) at 24FPS or higher, once they reach this threshold, these models are capable of identifying objects in video feeds, hence the “real-time” description</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>object detection</category>
+  <category>open source</category>
+  <category>computer vision</category>
+  <category>ml</category>
+  <guid>https://www.learnml.io/posts/apache-object-detection-models/</guid>
+  <pubDate>Fri, 30 May 2025 14:00:00 GMT</pubDate>
+</item>
 <item>
   <title>A Gentle Guide to Intersection over Union (IoU)</title>
   <dc:creator>Daniel Bourke</dc:creator>

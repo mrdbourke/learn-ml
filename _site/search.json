@@ -4,35 +4,35 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "A Gentle Guide to Intersection over Union (IoU)\n\n\n\nobject detection\n\ndata\n\ncomputer vision\n\nml\n\nml projects\n\n\n\nIoU is required for evaluating object detection models. But it can be a be tricky to get started with. This tutorial fixes that.\n\n\n\n\n\nApr 17, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nA Guide to Bounding Box Formats and How to Draw Them\n\n\n\nobject detection\n\ndata\n\ncomputer vision\n\nml\n\nml projects\n\n\n\nOne of the hardest parts of object detection is making sure your bounding boxes are in the right format. Let’s fix that.\n\n\n\n\n\nFeb 6, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nThe importance of a test set\n\n\n\ncustom datasets\n\ndata\n\ngetting started\n\nml\n\nml projects\n\n\n\nReal samples. Real places.\n\n\n\n\n\nAug 18, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nStart of learnml.io\n\n\n\nml\n\ngetting started\n\n\n\n\n\n\n\n\n\nAug 10, 2024\n\n\nDaniel Bourke\n\n\n\n\n\nNo matching items"
+    "text": "Apache 2.0 Open Source Object Detection Models\n\n\n\nobject detection\n\nopen source\n\ncomputer vision\n\nml\n\n\n\nHigh performing open source object detection models with permissive licences.\n\n\n\n\n\nMay 31, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nA Gentle Guide to Intersection over Union (IoU)\n\n\n\nobject detection\n\ndata\n\ncomputer vision\n\nml\n\nml projects\n\n\n\nIoU is required for evaluating object detection models. But it can be a be tricky to get started with. This tutorial fixes that.\n\n\n\n\n\nApr 17, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nA Guide to Bounding Box Formats and How to Draw Them\n\n\n\nobject detection\n\ndata\n\ncomputer vision\n\nml\n\nml projects\n\n\n\nOne of the hardest parts of object detection is making sure your bounding boxes are in the right format. Let’s fix that.\n\n\n\n\n\nFeb 6, 2025\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nThe importance of a test set\n\n\n\ncustom datasets\n\ndata\n\ngetting started\n\nml\n\nml projects\n\n\n\nReal samples. Real places.\n\n\n\n\n\nAug 18, 2024\n\n\nDaniel Bourke\n\n\n\n\n\n\n\n\n\n\n\n\nStart of learnml.io\n\n\n\nml\n\ngetting started\n\n\n\n\n\n\n\n\n\nAug 10, 2024\n\n\nDaniel Bourke\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Learning ML - Timeline",
     "section": "",
-    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n–\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
+    "text": "Started collecting high-performing Apache 2.0 (or MIT) licensed object detection models in a post.\nThese models perform on par or better than YOLO equivalents except have a more permissive license to use, even commercially.\nThe collection here."
   },
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
     "title": "Learning ML - Timeline",
     "section": "",
-    "text": "First blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n–\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
+    "text": "Started collecting high-performing Apache 2.0 (or MIT) licensed object detection models in a post.\nThese models perform on par or better than YOLO equivalents except have a more permissive license to use, even commercially.\nThe collection here."
   },
   {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
     "title": "Learning ML - Timeline",
-    "section": "2024-08-18",
-    "text": "2024-08-18\nAnother blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
+    "section": "2025-04-17",
+    "text": "2025-04-17\nContinuing on from the previous bounding box formats post, another object detection themed post with a hands-on guide for IoU (Intersection over Union).\nIoU measures how much two bounding boxes overlap.\nIt’s commonly used to evaluate an object detection model’s predictions in comparison to the ground truth labels.\nWherever you see the term “mAP” (Mean Average Precision, commonly seen reported for object detection models/papers), chances are, IoU is being used.\nMore on mAP soon."
   },
   {
     "objectID": "index.html#section-2",
     "href": "index.html#section-2",
     "title": "Learning ML - Timeline",
-    "section": "2024-08-10",
-    "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
+    "section": "2025-02-06",
+    "text": "2025-02-06\nFirst blog post for 2025.\nA guide to different bounding box formats.\nI’ve been diving into object detection (stay tuned for a future tutorial) and found that different bounding box formats can be an absolute nightmare to deal with.\nYou’ll have a well-trained model but your boxes will look terrible because they’re in the wrong format (this is mostly my own fault for not being careful which format to use).\nEither way, I wanted a resource to go through the major bounding box formats and some examples of when to use them.\nI’d like this to be a trend going forward, learn something by experimenting and creating a working example then compound the knowledge by writing about how to it/evaluate it yourself.\n–\nOn another note, January 2025 was one of the best months for open-source AI in recent memory. More on that soon."
   },
   {
     "objectID": "posts/the-importance-of-a-test-set/index.html",
@@ -236,5 +236,68 @@
     "title": "About",
     "section": "How is this website made?",
     "text": "How is this website made?\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "index.html#section-3",
+    "href": "index.html#section-3",
+    "title": "Learning ML - Timeline",
+    "section": "2024-08-18",
+    "text": "2024-08-18\nAnother blog post is live!\nThis importance of a test set.\nThis is fun.\nWill eventually sort out the rest of the pages on this website.\nE.g about, this homepage, tutorials and more.\nSlowly but surely."
+  },
+  {
+    "objectID": "posts/apache-detection-models/index.html",
+    "href": "posts/apache-detection-models/index.html",
+    "title": "Apache 2.0 Open Source Object Detection Models",
+    "section": "",
+    "text": "The following is a collection of high-perofmring object detection models with permissive licenses (e.g. Apache 2.0, MIT).\nWhy collect these?\nAfter diving into the world of object detection, you’ll probably run into YOLO (You Only Look Once) models.\nThese models perform very well, however, they often come with the AGPL-3.0 license.\nI’m not a lawyer but when I read this license, it seems that using code (including models) from repos containing this license results in you having to publish your own code under AGPL-3.0 as well.\nThis means if you’re a startup or a business using a AGPL-3.0 model and your app uses that model in a certain way, you must publish the app code as open-source under AGPL-3.0 too.\nTL;DR\nIf you want to keep your source code closed source or just generally want a more permissive license, use Apache 2.0 or MIT code/models.\nAgain, I’m not a lawyer but as a developer, I just prefer using things I know aren’t gonna come back to bite me."
+  },
+  {
+    "objectID": "posts/apache-detection-models/index.html#apache-2.0-or-mit-licensed-object-detection-models",
+    "href": "posts/apache-detection-models/index.html#apache-2.0-or-mit-licensed-object-detection-models",
+    "title": "Apache 2.0 Open Source Object Detection Models",
+    "section": "Apache 2.0 or MIT licensed object detection models",
+    "text": "Apache 2.0 or MIT licensed object detection models\nI’ve personally vetted the following to perform on par or better than almost any YOLO variant for real-time object detection.\n\n\n\nName\nCode/Models\nPaper\nLicense\nNotes\n\n\n\n\nRF-DETR (Roboflow DETR)\nGitHub\n-\nApache 2.0\n\n\n\nRT-DETRv2 (Real-time DETR)\nGitHub, Hugging Face\narXiv\nApache 2.0\n\n\n\nD-FINE (Fine‑grained Distribution Refinement)\nGitHub, Hugging Face\narXiv\nApache 2.0\n\n\n\n\nNotes:\n\nDETR = DEctection TRansformer (using the Transformer model architecture for object detection)\nReal-time object detection = models capable of identifying objects in image(s) at 24FPS or higher, once they reach this threshold, these models are capable of identifying objects in video feeds, hence the “real-time” description"
+  },
+  {
+    "objectID": "glossary.html",
+    "href": "glossary.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "glossary.html#hyperparameters",
+    "href": "glossary.html#hyperparameters",
+    "title": "",
+    "section": "Hyperparameters",
+    "text": "Hyperparameters\nHyperparameters are a set of values or settings that can be human-adjusted in the training of a machine learning model.\nFor example, learning rate (TK - add link for LR), this can be manually set at a value of learning_rate=0.001 or learning_rate=0.0001 and then programmatically adjusted over time.\nThe best values for hyperparameters are rarely known ahead of time and are often found experimentally.\nFor example, you might find a batch size of 128 to be too large for the hardware you’re using.\nSo you reduce the batch size to 64 and get better throughput.\nDifferent values for hyperparameters training on the same model and data can end with vastly different results.\nTuning hyperparameters takes practice and experimentation. Many machine learning papers report the values they use for different hyperparameters so that their results are reproducible.\nWhere possible, it’s a good idea to start with default values reported from a reliable source and then adjust over time as you begin to work on your own problems."
+  },
+  {
+    "objectID": "glossary.html#tk---loss-curves",
+    "href": "glossary.html#tk---loss-curves",
+    "title": "",
+    "section": "TK - Loss curves",
+    "text": "TK - Loss curves"
+  },
+  {
+    "objectID": "posts/apache-object-detection-models/index.html",
+    "href": "posts/apache-object-detection-models/index.html",
+    "title": "Apache 2.0 Open Source Object Detection Models",
+    "section": "",
+    "text": "The following is a collection of high-perofmring object detection models with permissive licenses (e.g. Apache 2.0, MIT).\nWhy collect these?\nAfter diving into the world of object detection, you’ll probably run into YOLO (You Only Look Once) models.\nThese models perform very well, however, they often come with the AGPL-3.0 license.\nI’m not a lawyer but when I read this license, it seems that using code (including models) from repos containing this license results in you having to publish your own code under AGPL-3.0 as well.\nThis means if you’re a startup or a business using a AGPL-3.0 model and your app uses that model in a certain way, you must publish the app code as open-source under AGPL-3.0 too.\nTL;DR\nIf you want to keep your source code closed source or just generally want a more permissive license, use Apache 2.0 or MIT code/models.\nAgain, I’m not a lawyer but as a developer, I just prefer using things I know aren’t gonna come back to bite me."
+  },
+  {
+    "objectID": "posts/apache-object-detection-models/index.html#apache-2.0-or-mit-licensed-object-detection-models",
+    "href": "posts/apache-object-detection-models/index.html#apache-2.0-or-mit-licensed-object-detection-models",
+    "title": "Apache 2.0 Open Source Object Detection Models",
+    "section": "Apache 2.0 or MIT licensed object detection models",
+    "text": "Apache 2.0 or MIT licensed object detection models\nI’ve personally vetted the following to perform on par or better than almost any YOLO variant for real-time object detection.\n\n\n\nName\nCode/Models\nPaper\nLicense\nNotes\n\n\n\n\nRF-DETR (Roboflow DETR)\nGitHub\n-\nApache 2.0\n\n\n\nRT-DETRv2 (Real-time DETR)\nGitHub, Hugging Face\narXiv\nApache 2.0\n\n\n\nD-FINE (Fine‑grained Distribution Refinement)\nGitHub, Hugging Face\narXiv\nApache 2.0\n\n\n\n\nNotes:\n\nDETR = DEctection TRansformer (using the Transformer model architecture for object detection)\nReal-time object detection = models capable of identifying objects in image(s) at 24FPS or higher, once they reach this threshold, these models are capable of identifying objects in video feeds, hence the “real-time” description"
+  },
+  {
+    "objectID": "index.html#section-4",
+    "href": "index.html#section-4",
+    "title": "Learning ML - Timeline",
+    "section": "2024-08-10",
+    "text": "2024-08-10\nMore coming soon.\nJust getting this bad boy up and running as a lil weekend project so I can start to write down ideas whenever they come into my head.\nSee the start blog post for more."
   }
 ]

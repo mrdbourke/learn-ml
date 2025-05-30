@@ -2,6 +2,14 @@
 title: "Learning ML - Timeline"
 ---
 
+## 2025-05-31
+
+Started collecting high-performing Apache 2.0 (or MIT) licensed object detection models in a post.
+
+These models perform on par or better than YOLO equivalents except have a more permissive license to use, even commercially.
+
+The collection [here](https://www.learnml.io/posts/apache-object-detection-models/).
+
 ## 2025-04-17
 
 Continuing on from the previous bounding box formats post, another object detection themed post with a [hands-on guide for IoU](https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/) (Intersection over Union).
