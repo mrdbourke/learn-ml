@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Daniel Bourke">
-<meta name="dcterms.date" content="2024-08-18">
-<meta name="description" content="Real samples. Real places.">
 
-<title>The importance of a test set – learnml.io</title>
+<title>glossary – learnml.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,26 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-dde8d7229bfee0f8bb5efd37f0f9ae1e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-dde8d7229bfee0f8bb5efd37f0f9ae1e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,29 +69,21 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="The importance of a test set – learnml.io">
-<meta property="og:description" content="Real samples. Real places.">
-<meta property="og:image" content="https://www.learnml.io/posts/the-importance-of-a-test-set/images/ml-lesson-learned-internet-data-vs-real-life-data.png">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="learnml.io">
 <meta property="og:site_name" content="learnml.io">
-<meta property="og:image:height" content="1070">
-<meta property="og:image:width" content="1912">
-<meta name="twitter:title" content="The importance of a test set – learnml.io">
-<meta name="twitter:description" content="Real samples. Real places.">
-<meta name="twitter:image" content="https://www.learnml.io/posts/the-importance-of-a-test-set/images/ml-lesson-learned-internet-data-vs-real-life-data.png">
-<meta name="twitter:image-height" content="1070">
-<meta name="twitter:image-width" content="1912">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="learnml.io">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">learnml.io</span>
     </a>
   </div>
@@ -108,21 +94,21 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../../blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -134,47 +120,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">The importance of a test set</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/mrdbourke/learn-ml/blob/main/posts/the-importance-of-a-test-set/index.qmd"><i class="bi"></i> Code</button></div></div>
-                  <div>
-        <div class="description">
-          Real samples. Real places.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">custom datasets</div>
-                <div class="quarto-category">data</div>
-                <div class="quarto-category">getting started</div>
-                <div class="quarto-category">ml</div>
-                <div class="quarto-category">ml projects</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Daniel Bourke </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">August 18, 2024</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -182,119 +128,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#faq" id="toc-faq" class="nav-link" data-scroll-target="#faq">FAQ</a>
+  <li><a href="#machine-learning-glossary" id="toc-machine-learning-glossary" class="nav-link active" data-scroll-target="#machine-learning-glossary">Machine learning glossary</a>
   <ul class="collapse">
-  <li><a href="#what-about-the-training-set" id="toc-what-about-the-training-set" class="nav-link" data-scroll-target="#what-about-the-training-set">What about the training set?</a></li>
+  <li><a href="#hyperparameters" id="toc-hyperparameters" class="nav-link" data-scroll-target="#hyperparameters">Hyperparameters</a></li>
+  <li><a href="#tk---loss-curves" id="toc-tk---loss-curves" class="nav-link" data-scroll-target="#tk---loss-curves">TK - Loss curves</a></li>
   </ul></li>
-  <li><a href="#extra-reading" id="toc-extra-reading" class="nav-link" data-scroll-target="#extra-reading">Extra reading</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/posts/the-importance-of-a-test-set/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/glossary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/mrdbourke/learn-ml/blob/main/glossary.qmd"><i class="bi"></i> Code</button></div></div>
 
 
 
 
-
-<p>Had a phone call the other day with someone who wanted advice for their machine learning project.</p>
-<p>Their problem was a sound classification problem for 800 unique classes.</p>
-<p>Of course, the trend in the past may be to focus on which model to use.</p>
-<p>However, with modern deep learning models (e.g.&nbsp;2020 onwards), it’s likely a large enough transformer or convolutional neural network (CNN) model would be able to distinguish the 800 unique classes given enough data.</p>
-<p>With that being said, how could you test this?</p>
-<p>The classes they wanted to identify were specific to the product they offer.</p>
-<p>In this case, animal sound identification.</p>
-<p>They told me an existing dataset for their problem did exist online, however, the available dataset didn’t exactly offer the scenario they wanted to use the model in.</p>
-<p>And so my main piece of advice for starting the project (or any custom machine learning project) was for them to <strong>spend time crafting a test set well aligned with their exact use case</strong>.</p>
-<p>As in, if you expect your model is going to used in scenario X, collect data samples for scenario X and put them in your testing set.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Three datasets refresher
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>As a reminder, in a machine learning project one of the first things that often happens is a dataset gets split into three sets:</p>
-<ol type="1">
-<li><strong>Training set</strong> - This is where a target model will try to learn the relationship between inputs and outputs. For example, does the input text “C0ngratl4tions!!1 You’ve won $23243248 d0llar9!!!” belong to the output label <code>spam</code> or <code>not_spam</code>?</li>
-<li><strong>Validation set</strong> - This where you can try to tweak the hyperparameters (settings) of your model to try and improve its results on the training set.</li>
-<li><strong>Test set</strong> - The model never sees these samples during training. You evaluate the model on this split to see how well the patterns learned on the training set generalise to unseen problems.</li>
-</ol>
-<p>An analogy would be that if a model is akin to a university student, the training set is the course materials, the validation set is the practice exam and the test set is the final exam.</p>
-<p>All three sets are exclusive of each other.</p>
-<p>For example, no samples which are in the training set should be in either of the other sets and vice versa.</p>
-</div>
-</div>
-</div>
-<p>Yes, crafting a high-quality test set can be time consuming.</p>
-<p>But it’s one of the most valuable things you can do in any machine learning project.</p>
-<p>Having a high quality test means you can experiment with different models, training setups and training data inputs (real and synthetic) and still be confident that if your model does well on your test set, these results will closely transfer to real-world use cases.</p>
-<p>For example, my brother and I work on a food education app called <a href="https://nutrify.app">Nutrify</a>.</p>
-<p>The premise of Nutrify is simple, take a photo of food with your smartphone, the food gets identified by computer vision and information about the food is displayed.</p>
-<p>For the computer vision models, we use a Vision Transformer (ViT) architecture, pretrained on ImageNet and then fine-tuned on our own custom dataset of food images and deployed to run on device (CoreML models running on iPhones, these models work offline with no internet connection).</p>
-<p>Our custom dataset contains a mixture of open-source internet images and real-life images (e.g.&nbsp;photos we’ve manually taken ourselves).</p>
-<p>The real-life images are crucial for our use case.</p>
-<p>Since when you find images of food on the internet, they are often not the same kind of images you might take when you’re quickly taking a photo of your meal or at supermarket when using Nutrify.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="When building a task-specific machine learning product, you can often get pretty good results with publically available data (e.g.&nbsp;images/text from the internet). However, if your task deviates from or doesn’t involve data readily available on the internet, you will often get to a point where you have to start collecting your own data sources for both training and testing. Source of image is a slide form a talk I gave on MLops lessons learned building Nutrify."><img src="./images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The image contrasts 'Internet data' with 'Real life data.' On the left side, a Google search for 'red apple' shows various digital images and icons of apples, labeled as 'Internet data (Ok to get started).' On the right side, there are four photos of real apples in different contexts, labeled as 'Real life data (Required for reliability).' The message emphasizes that while internet data can be useful initially, real-life data is essential for accuracy and reliability."></a></p>
-</figure>
-</div>
-<figcaption>When building a task-specific machine learning product, you can often get pretty good results with publically available data (e.g.&nbsp;images/text from the internet). However, if your task deviates from or doesn’t involve data readily available on the internet, you will often get to a point where you have to start collecting your own data sources for both training and testing. Source of image is a slide form a <a href="https://youtu.be/pZXt-flSAZo?si=SKvS66OyGc7UIKIh">talk I gave on MLops lessons learned building Nutrify</a>.</figcaption>
-</figure>
-</div>
-<p>Food images on the internet are often high-quality shot with a digital camera from specific angles with good lighting or drawing-style images.</p>
-<p>Whereas food images taken on a smartphone are often less high-quality from almost any angle with multiple lighting conditions.</p>
-<p>And so, to make sure that our model doesn’t perform poorly when we deploy it to the Nutrify app, our test dataset is constructed with many real-life images that we’ve taken of food with the iPhone camera.</p>
-<p>So we know that if our model performs well on our test set, this performance <em>should</em> (note: should italicised because at the end of the day machine learning is still probabilistic and there are no guarantees) be mirrored in the real-world.</p>
-<p>We also test it ourselves many times in real-world situations before pushing the update live.</p>
-<p>However, once you get to a certain scale, testing every real-world situation can be hard/impossible to do yourself.</p>
-<p>This is where you’ll have to rely on your test set being well aligned with your actual problem.</p>
-<p>There’s a wonderful Japanese principle which captures this idea called <a href="https://en.wikipedia.org/wiki/Genchi_Genbutsu"><em>Genchi Genbustu</em></a> or “real things, real places” or “go an see for yourself”.</p>
-<p>In essence, make sure your test set comprises of samples containing “real things in real places”.</p>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Having a good test set relates to almost any machine learning workflow.</p>
-<p>Whether you’re building a small application to identify foods with computer vision.</p>
-<p>Or whether you’re building a large language model (LLM) or self-driving car system to serve millions of customers.</p>
-<p>So a list of general recommendations for anyone working on a custom machine learning project:</p>
-<ul>
-<li><strong>Have everyone on the team interact/visualize at least 100 random pieces of <em>real</em> data.</strong> Even better, have a dedicated data day once per month or at the start of each project so everyone is familiar with the actual data.</li>
-<li><strong>Spend time crafting a high quality test set with data samples from your actual use case.</strong> This test set may turn out to be the most valuable piece of your project.</li>
-<li><strong>Continually review the test set overtime to make sure it matches your production use case.</strong> As your product changes over time, so should the data you’re testing your models on.</li>
-<li><strong>Evaluating a model is just as important, if not more important than training a model.</strong> If you train a model but it performs poorly on the test set, is it really a useable model?</li>
-<li><strong>Traditional software has tests and so should machine learning-powered software.</strong> Despite the rumours of AI becoming conscious, at the time of writing, and as far as I can tell machine learning models (including LLMs) are still pieces of software. In ML, consider your models/data <em>as</em> code, and so, if in software development you test your code, in ML, you should test your models/data.
-<ul>
-<li><strong>Note:</strong> Test cases in ML are also often referred to as “evals” or “evaluations”.</li>
-</ul></li>
-</ul>
+<section id="machine-learning-glossary" class="level1">
+<h1>Machine learning glossary</h1>
+<section id="hyperparameters" class="level2">
+<h2 class="anchored" data-anchor-id="hyperparameters">Hyperparameters</h2>
+<p><strong>Hyperparameters</strong> are a set of values or settings that can be human-adjusted in the training of a machine learning model.</p>
+<p>For example, learning rate (TK - add link for LR), this can be manually set at a value of <code>learning_rate=0.001</code> or <code>learning_rate=0.0001</code> and then programmatically adjusted over time.</p>
+<p>The best values for hyperparameters are rarely known ahead of time and are often found experimentally.</p>
+<p>For example, you might find a batch size of <code>128</code> to be too large for the hardware you’re using.</p>
+<p>So you reduce the batch size to <code>64</code> and get better throughput.</p>
+<p>Different values for hyperparameters training on the same model and data can end with vastly different results.</p>
+<p>Tuning hyperparameters takes practice and experimentation. Many machine learning papers report the values they use for different hyperparameters so that their results are reproducible.</p>
+<p>Where possible, it’s a good idea to start with default values reported from a reliable source and then adjust over time as you begin to work on your own problems.</p>
 </section>
-<section id="faq" class="level2">
-<h2 class="anchored" data-anchor-id="faq">FAQ</h2>
-<section id="what-about-the-training-set" class="level3">
-<h3 class="anchored" data-anchor-id="what-about-the-training-set">What about the training set?</h3>
-<p>Ho ho! You are so right. Everything said for the test set can also be said for the training set.</p>
-<p>Especially “real things, real places”.</p>
-<p>This article focuses mainly on the test set as an example because of the availability of large pretrained foundation models.</p>
-<p>These models often perform very well in their given domain, however, can sometimes fail on very specific non-internet data (e.g.&nbsp;your custom dataset).</p>
-<p>So if you’re finding that your models are performing poorly on your task-specific test set, it may be time to collect more task-specific training samples and fine-tune your model on those.</p>
-</section>
-</section>
-<section id="extra-reading" class="level2">
-<h2 class="anchored" data-anchor-id="extra-reading">Extra reading</h2>
-<ul>
-<li>Hamel Husain’s blog post <a href="https://hamel.dev/blog/posts/evals/"><em>Your AI project needs evals</em></a> is an excellent read with a very a similar theme to this one and specific example use cases in the world of LLMs.</li>
-</ul>
+<section id="tk---loss-curves" class="level2">
+<h2 class="anchored" data-anchor-id="tk---loss-curves">TK - Loss curves</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -749,40 +614,8 @@ Three datasets refresher
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/posts/the-importance-of-a-test-set/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/glossary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

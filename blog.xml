@@ -9,7 +9,7 @@
 <link>https://www.learnml.io/blog.html</link>
 <atom:link href="https://www.learnml.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>a blog about learning machine learning</description>
-<generator>quarto-1.7.30</generator>
+<generator>quarto-1.7.31</generator>
 <lastBuildDate>Thu, 17 Apr 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A Gentle Guide to Intersection over Union (IoU)</title>
