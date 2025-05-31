@@ -1,0 +1,41 @@
+---
+title: "Apache 2.0 Open Source Object Detection Models"
+description: "High performing open source object detection models with permissive licences."
+author: "Daniel Bourke"
+date: "2025-05-31"
+categories: [object detection, open source, computer vision, ml]
+image: "images/ml-lesson-learned-internet-data-vs-real-life-data.png"
+---
+
+The following is a collection of high-perofmring object detection models with permissive licenses (e.g. [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0), [MIT](https://opensource.org/license/mit)).
+
+Why collect these?
+
+After diving into the world of object detection, you'll probably run into YOLO (You Only Look Once) models.
+
+These models perform very well, however, they often come with the [AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html) license.
+
+I'm not a lawyer but when I read this license, it seems that using code (including models) from repos containing this license results in you having to publish your own code under AGPL-3.0 as well.
+
+This means if you're a startup or a business using a AGPL-3.0 model and your app uses that model in a certain way, you must publish the app code as open-source under AGPL-3.0 too.
+
+TL;DR
+
+If you want to keep your source code closed source or just generally want a more permissive license, use Apache 2.0 or MIT code/models.
+
+Again, I'm not a lawyer but as a developer, I just prefer using things I know aren't gonna come back to bite me.
+
+## Apache 2.0 or MIT licensed object detection models
+
+I've personally vetted the following to perform on par or better than almost any YOLO variant for real-time object detection.
+
+| Name | Code/Models | Paper | License | Notes | 
+| ----- | ----- | ----- | ----- | ----- |
+| RF-DETR (Roboflow DETR) | [GitHub](https://github.com/roboflow/rf-detr) | - | Apache 2.0 | |
+| RT-DETRv2 (Real-time DETR) | [GitHub](https://github.com/lyuwenyu/RT-DETR), [Hugging Face](https://huggingface.co/docs/transformers/main/en/model_doc/rt_detr_v2) | [arXiv](https://arxiv.org/abs/2407.17140) | Apache 2.0 | |
+| D-FINE (Fine‑grained Distribution Refinement) | [GitHub](https://github.com/Peterande/D-FINE), [Hugging Face](https://huggingface.co/docs/transformers/model_doc/d_fine) | [arXiv](https://arxiv.org/abs/2410.13842) | Apache 2.0 | |
+
+Notes:
+
+* DETR = DEctection TRansformer (using the Transformer model architecture for object detection)
+* Real-time object detection = models capable of identifying objects in image(s) at 24FPS or higher, once they reach this threshold, these models are capable of identifying objects in video feeds, hence the "real-time" description

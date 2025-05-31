@@ -2,7 +2,6 @@
 /.quarto/
 
 # Models
-*models*
 *.pt*
 
 # Tracking
