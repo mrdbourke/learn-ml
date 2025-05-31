@@ -1,5 +1,7 @@
 # Machine learning glossary
 
+WORK IN PROGRESS - will add common machine learning terms here over time... 
+
 ## Hyperparameters
 
 **Hyperparameters** are a set of values or settings that can be human-adjusted in the training of a machine learning model.
