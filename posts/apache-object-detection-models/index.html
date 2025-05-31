@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Daniel Bourke">
+<meta name="dcterms.date" content="2025-05-31">
+<meta name="description" content="High performing open source object detection models with permissive licences.">
 
-<title>Blog – learnml.io</title>
+<title>Apache 2.0 Open Source Object Detection Models – learnml.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dde8d7229bfee0f8bb5efd37f0f9ae1e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dde8d7229bfee0f8bb5efd37f0f9ae1e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,72 +70,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="learnml.io" href="blog.xml" data-external="1"><meta property="og:title" content="Blog – learnml.io">
-<meta property="og:image" content="https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/images/iou-blog-post-cover.jpg">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Apache 2.0 Open Source Object Detection Models – learnml.io">
+<meta property="og:description" content="High performing open source object detection models with permissive licences.">
+<meta property="og:image" content="https://www.learnml.io/posts/apache-object-detection-models/images/ml-lesson-learned-internet-data-vs-real-life-data.png">
 <meta property="og:site_name" content="learnml.io">
-<meta name="twitter:title" content="Blog – learnml.io">
-<meta name="twitter:image" content="https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/images/iou-blog-post-cover.jpg">
+<meta name="twitter:title" content="Apache 2.0 Open Source Object Detection Models – learnml.io">
+<meta name="twitter:description" content="High performing open source object detection models with permissive licences.">
+<meta name="twitter:image" content="https://www.learnml.io/posts/apache-object-detection-models/images/ml-lesson-learned-internet-data-vs-real-life-data.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -145,7 +90,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">learnml.io</span>
     </a>
   </div>
@@ -156,21 +101,21 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -184,224 +129,118 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <div class="quarto-title-block"><div><h1 class="title">Blog</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/mrdbourke/learn-ml/blob/main/blog.qmd"><i class="bi"></i> Code</button></div></div>
-                      </div>
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Apache 2.0 Open Source Object Detection Models</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/mrdbourke/learn-ml/blob/main/posts/apache-object-detection-models/index.qmd"><i class="bi"></i> Code</button></div></div>
+                  <div>
+        <div class="description">
+          High performing open source object detection models with permissive licences.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">object detection</div>
+                <div class="quarto-category">open source</div>
+                <div class="quarto-category">computer vision</div>
+                <div class="quarto-category">ml</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Daniel Bourke </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 31, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Y29tcHV0ZXIlMjB2aXNpb24=">computer vision <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y3VzdG9tJTIwZGF0YXNldHM=">custom datasets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YQ==">data <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Z2V0dGluZyUyMHN0YXJ0ZWQ=">getting started <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWw=">ml <span class="quarto-category-count">(5)</span></div><div class="category" data-category="bWwlMjBwcm9qZWN0cw==">ml projects <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b2JqZWN0JTIwZGV0ZWN0aW9u">object detection <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b3BlbiUyMHNvdXJjZQ==">open source <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#apache-2.0-or-mit-licensed-object-detection-models" id="toc-apache-2.0-or-mit-licensed-object-detection-models" class="nav-link active" data-scroll-target="#apache-2.0-or-mit-licensed-object-detection-models">Apache 2.0 or MIT licensed object detection models</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/posts/apache-object-detection-models/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>The following is a collection of high-perofmring object detection models with permissive licenses (e.g.&nbsp;<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>, <a href="https://opensource.org/license/mit">MIT</a>).</p>
+<p>Why collect these?</p>
+<p>After diving into the world of object detection, you’ll probably run into YOLO (You Only Look Once) models.</p>
+<p>These models perform very well, however, they often come with the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0</a> license.</p>
+<p>I’m not a lawyer but when I read this license, it seems that using code (including models) from repos containing this license results in you having to publish your own code under AGPL-3.0 as well.</p>
+<p>This means if you’re a startup or a business using a AGPL-3.0 model and your app uses that model in a certain way, you must publish the app code as open-source under AGPL-3.0 too.</p>
+<p>TL;DR</p>
+<p>If you want to keep your source code closed source or just generally want a more permissive license, use Apache 2.0 or MIT code/models.</p>
+<p>Again, I’m not a lawyer but as a developer, I just prefer using things I know aren’t gonna come back to bite me.</p>
+<section id="apache-2.0-or-mit-licensed-object-detection-models" class="level2">
+<h2 class="anchored" data-anchor-id="apache-2.0-or-mit-licensed-object-detection-models">Apache 2.0 or MIT licensed object detection models</h2>
+<p>I’ve personally vetted the following to perform on par or better than almost any YOLO variant for real-time object detection.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Code/Models</th>
+<th>Paper</th>
+<th>License</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RF-DETR (Roboflow DETR)</td>
+<td><a href="https://github.com/roboflow/rf-detr">GitHub</a></td>
+<td>-</td>
+<td>Apache 2.0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>RT-DETRv2 (Real-time DETR)</td>
+<td><a href="https://github.com/lyuwenyu/RT-DETR">GitHub</a>, <a href="https://huggingface.co/docs/transformers/main/en/model_doc/rt_detr_v2">Hugging Face</a></td>
+<td><a href="https://arxiv.org/abs/2407.17140">arXiv</a></td>
+<td>Apache 2.0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>D-FINE (Fine‑grained Distribution Refinement)</td>
+<td><a href="https://github.com/Peterande/D-FINE">GitHub</a>, <a href="https://huggingface.co/docs/transformers/model_doc/d_fine">Hugging Face</a></td>
+<td><a href="https://arxiv.org/abs/2410.13842">arXiv</a></td>
+<td>Apache 2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li>DETR = DEctection TRansformer (using the Transformer model architecture for object detection)</li>
+<li>Real-time object detection = models capable of identifying objects in image(s) at 24FPS or higher, once they reach this threshold, these models are capable of identifying objects in video feeds, hence the “real-time” description</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="b2JqZWN0JTIwZGV0ZWN0aW9uJTJDb3BlbiUyMHNvdXJjZSUyQ2NvbXB1dGVyJTIwdmlzaW9uJTJDbWw=" data-listing-date-sort="1748649600000" data-listing-file-modified-sort="1748649887755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="287">
-<div class="thumbnail"><a href="./posts/apache-object-detection-models/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/apache-object-detection-models/images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/apache-object-detection-models/index.html" class="no-external">Apache 2.0 Open Source Object Detection Models</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b2JqZWN0JTIwZGV0ZWN0aW9u'); return false;">object detection</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNvdXJjZQ=='); return false;">open source</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXIlMjB2aXNpb24='); return false;">computer vision</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">ml</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/apache-object-detection-models/index.html" class="no-external">
-<p>High performing open source object detection models with permissive licences.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/apache-object-detection-models/index.html" class="no-external">
-<div class="listing-date">
-May 31, 2025
-</div>
-<div class="listing-author">
-Daniel Bourke
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="b2JqZWN0JTIwZGV0ZWN0aW9uJTJDZGF0YSUyQ2NvbXB1dGVyJTIwdmlzaW9uJTJDbWwlMkNtbCUyMHByb2plY3Rz" data-listing-date-sort="1744848000000" data-listing-file-modified-sort="1748649887692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3481">
-<div class="thumbnail"><a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/a-gentle-guide-to-intersection-over-union/images/iou-blog-post-cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">A Gentle Guide to Intersection over Union (IoU)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b2JqZWN0JTIwZGV0ZWN0aW9u'); return false;">object detection</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXIlMjB2aXNpb24='); return false;">computer vision</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">ml</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwlMjBwcm9qZWN0cw=='); return false;">ml projects</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">
-<p>IoU is required for evaluating object detection models. But it can be a be tricky to get started with. This tutorial fixes that.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/a-gentle-guide-to-intersection-over-union/index.html" class="no-external">
-<div class="listing-date">
-Apr 17, 2025
-</div>
-<div class="listing-author">
-Daniel Bourke
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="b2JqZWN0JTIwZGV0ZWN0aW9uJTJDZGF0YSUyQ2NvbXB1dGVyJTIwdmlzaW9uJTJDbWwlMkNtbCUyMHByb2plY3Rz" data-listing-date-sort="1738800000000" data-listing-file-modified-sort="1748649887755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3156">
-<div class="thumbnail"><a href="./posts/a-guide-to-bounding-box-formats/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/a-guide-to-bounding-box-formats/images/bounding-box-formats-blog-post-cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/a-guide-to-bounding-box-formats/index.html" class="no-external">A Guide to Bounding Box Formats and How to Draw Them</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b2JqZWN0JTIwZGV0ZWN0aW9u'); return false;">object detection</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXIlMjB2aXNpb24='); return false;">computer vision</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">ml</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwlMjBwcm9qZWN0cw=='); return false;">ml projects</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/a-guide-to-bounding-box-formats/index.html" class="no-external">
-<p>One of the hardest parts of object detection is making sure your bounding boxes are in the right format. Let’s fix that.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/a-guide-to-bounding-box-formats/index.html" class="no-external">
-<div class="listing-date">
-Feb 6, 2025
-</div>
-<div class="listing-author">
-Daniel Bourke
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Y3VzdG9tJTIwZGF0YXNldHMlMkNkYXRhJTJDZ2V0dGluZyUyMHN0YXJ0ZWQlMkNtbCUyQ21sJTIwcHJvamVjdHM=" data-listing-date-sort="1723939200000" data-listing-file-modified-sort="1748649887758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1348">
-<div class="thumbnail"><a href="./posts/the-importance-of-a-test-set/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/the-importance-of-a-test-set/images/ml-lesson-learned-internet-data-vs-real-life-data.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/the-importance-of-a-test-set/index.html" class="no-external">The importance of a test set</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y3VzdG9tJTIwZGF0YXNldHM='); return false;">custom datasets</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2V0dGluZyUyMHN0YXJ0ZWQ='); return false;">getting started</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">ml</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwlMjBwcm9qZWN0cw=='); return false;">ml projects</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/the-importance-of-a-test-set/index.html" class="no-external">
-<p>Real samples. Real places.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/the-importance-of-a-test-set/index.html" class="no-external">
-<div class="listing-date">
-Aug 18, 2024
-</div>
-<div class="listing-author">
-Daniel Bourke
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="bWwlMkNnZXR0aW5nJTIwc3RhcnRlZA==" data-listing-date-sort="1723248000000" data-listing-file-modified-sort="1748649887677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
-<div class="thumbnail"><a href="./posts/2024-08-10-start-ml-blog/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-08-10-start-ml-blog/index.html" class="no-external">Start of learnml.io</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">ml</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2V0dGluZyUyMHN0YXJ0ZWQ='); return false;">getting started</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2024-08-10-start-ml-blog/index.html" class="no-external">
-Yo!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2024-08-10-start-ml-blog/index.html" class="no-external">
-<div class="listing-date">
-Aug 10, 2024
-</div>
-<div class="listing-author">
-Daniel Bourke
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -857,4 +696,4 @@ Daniel Bourke
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/blog.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mrdbourke/learn-ml/edit/main/posts/apache-object-detection-models/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mrdbourke/learn-ml/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

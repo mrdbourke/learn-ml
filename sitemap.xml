@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.learnml.io/glossary.html</loc>
-    <lastmod>2025-05-31T00:00:38.884Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/index.html</loc>
-    <lastmod>2025-05-31T00:00:38.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/posts/2024-08-10-start-ml-blog/index.html</loc>
-    <lastmod>2025-05-31T00:00:38.884Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/index.html</loc>
-    <lastmod>2025-05-31T00:00:38.884Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/about.html</loc>
-    <lastmod>2025-05-31T00:00:38.884Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/blog.html</loc>
-    <lastmod>2025-05-31T00:00:38.884Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.learnml.io/posts/a-guide-to-bounding-box-formats/index.html</loc>
-    <lastmod>2025-05-31T00:00:38.961Z</lastmod>
+    <lastmod>2025-05-31T00:04:47.677Z</lastmod>
   </url>
   <url>
     <loc>https://www.learnml.io/posts/the-importance-of-a-test-set/index.html</loc>
-    <lastmod>2025-05-31T00:00:38.965Z</lastmod>
+    <lastmod>2025-05-31T00:04:47.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/a-guide-to-bounding-box-formats/index.html</loc>
+    <lastmod>2025-05-31T00:04:47.755Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/blog.html</loc>
+    <lastmod>2025-05-31T00:04:47.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/about.html</loc>
+    <lastmod>2025-05-31T00:04:47.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/index.html</loc>
+    <lastmod>2025-05-31T00:04:47.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/2024-08-10-start-ml-blog/index.html</loc>
+    <lastmod>2025-05-31T00:04:47.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/a-gentle-guide-to-intersection-over-union/index.html</loc>
+    <lastmod>2025-05-31T00:04:47.692Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.learnml.io/posts/apache-object-detection-models/index.html</loc>
+    <lastmod>2025-05-31T00:04:47.755Z</lastmod>
   </url>
 </urlset>
